@@ -18,3 +18,13 @@ c:\users\edouard forestier\documents\visual studio 2015\Projects\stock_restaurat
 c:\users\edouard forestier\documents\visual studio 2015\Projects\stock_restauration\stock_restauration\obj\Debug\benevole.g.cs
 c:\users\edouard forestier\documents\visual studio 2015\Projects\stock_restauration\stock_restauration\obj\Debug\benevole.baml
 c:\users\edouard forestier\documents\visual studio 2015\Projects\stock_restauration\stock_restauration\obj\Debug\stock_restauration.csprojResolveAssemblyReference.cache
+C:\Users\edouard.forestier\Documents\GitHub\Stock_NDLE\stock_restauration\stock_restauration\bin\Debug\stock_restauration.exe.config
+C:\Users\edouard.forestier\Documents\GitHub\Stock_NDLE\stock_restauration\stock_restauration\obj\Debug\stock_restauration.exe
+C:\Users\edouard.forestier\Documents\GitHub\Stock_NDLE\stock_restauration\stock_restauration\obj\Debug\stock_restauration.pdb
+C:\Users\edouard.forestier\Documents\GitHub\Stock_NDLE\stock_restauration\stock_restauration\obj\Debug\stock_restauration.csprojResolveAssemblyReference.cache
+C:\Users\edouard.forestier\Documents\GitHub\Stock_NDLE\stock_restauration\stock_restauration\obj\Debug\benevole.g.cs
+C:\Users\edouard.forestier\Documents\GitHub\Stock_NDLE\stock_restauration\stock_restauration\obj\Debug\MainWindow.g.cs
+C:\Users\edouard.forestier\Documents\GitHub\Stock_NDLE\stock_restauration\stock_restauration\obj\Debug\tab_benevole.g.cs
+C:\Users\edouard.forestier\Documents\GitHub\Stock_NDLE\stock_restauration\stock_restauration\obj\Debug\App.g.cs
+C:\Users\edouard.forestier\Documents\GitHub\Stock_NDLE\stock_restauration\stock_restauration\obj\Debug\stock_restauration_MarkupCompile.cache
+C:\Users\edouard.forestier\Documents\GitHub\Stock_NDLE\stock_restauration\stock_restauration\obj\Debug\stock_restauration_MarkupCompile.lref
