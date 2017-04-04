@@ -28,7 +28,7 @@ namespace stock_restauration
 
         private void btn_Bar_erdre_Click(object sender, RoutedEventArgs e)
         {
-            tab_benevole wind_Bar_er = new tab_benevole;
+            tab_benevole wind_Bar_er = new tab_benevole();
             wind_Bar_er.ShowDialog();
         }
         

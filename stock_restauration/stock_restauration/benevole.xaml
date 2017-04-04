@@ -28,41 +28,41 @@
         <GroupBox x:Name="gb_barbeuck" Header="BARBEUCK" HorizontalAlignment="Left" Margin="51,97,0,0" VerticalAlignment="Top" Height="188" Width="218">
             <StackPanel>
                 <Button x:Name="btn_Bar_erdre" Content="Erdre" HorizontalAlignment="Left"  VerticalAlignment="Top" Margin="10,30,10,0" Width="186" Click="btn_Bar_erdre_Click"/>
-                <Button x:Name="bt_Bar_Chat" Content="Chatêau" HorizontalAlignment="Left"  VerticalAlignment="Top" Margin="10,30,10,0" Width="186"/>
+                <Button x:Name="bt_Bar_Chat" Content="Chatêau" HorizontalAlignment="Left"  VerticalAlignment="Top" Margin="10,30,10,0" Width="186" Click="btn_Bar_erdre_Click"/>
             </StackPanel>
         </GroupBox>
         
         <GroupBox x:Name="gb_crepe" Header="CREPE" HorizontalAlignment="Left" Margin="398,97,0,0" VerticalAlignment="Top" Height="188" Width="218">
             <StackPanel>
-                <Button x:Name="btn_Cer_erdre" Content="Erdre" HorizontalAlignment="Left"  VerticalAlignment="Top" Margin="10,30,10,0" Width="186" />
+                <Button x:Name="btn_Cer_erdre" Content="Erdre" HorizontalAlignment="Left"  VerticalAlignment="Top" Margin="10,30,10,0" Width="186" Click="btn_Bar_erdre_Click" />
             </StackPanel>
         </GroupBox>
 
         <GroupBox x:Name="gb_gateau" Header="GATEAUX" HorizontalAlignment="Left" Margin="724,97,0,0" VerticalAlignment="Top" Height="188" Width="218">
             <StackPanel>
-                <Button x:Name="btn_Gat_erdre" Content="Erdre" HorizontalAlignment="Left"  VerticalAlignment="Top" Margin="10,30,10,0" Width="186"/>
-                <Button x:Name="bt_Gat_Chat" Content="Chatêau" HorizontalAlignment="Left"  VerticalAlignment="Top" Margin="10,30,10,0" Width="186" />
+                <Button x:Name="btn_Gat_erdre" Content="Erdre" HorizontalAlignment="Left"  VerticalAlignment="Top" Margin="10,30,10,0" Width="186" Click="btn_Bar_erdre_Click"/>
+                <Button x:Name="bt_Gat_Chat" Content="Chatêau" HorizontalAlignment="Left"  VerticalAlignment="Top" Margin="10,30,10,0" Width="186" Click="btn_Bar_erdre_Click"/>
             </StackPanel>
         </GroupBox>
 
         <GroupBox x:Name="gb_snack" Header="SNACK" HorizontalAlignment="Left" Margin="50,390,0,0" VerticalAlignment="Top" Height="188" Width="218">
             <StackPanel>
-                <Button x:Name="btn_Sna_erdre" Content="Erdre" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,10,0" Width="186"/>
-                <Button x:Name="bt_Sna_Chat" Content="Chatêau" HorizontalAlignment="Left"  VerticalAlignment="Top" Margin="10,20,10,0" Width="186"/>
-                <Button x:Name="bt_Sna_pate" Content="Pâtes" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,30,10,0" Width="186"/>
+                <Button x:Name="btn_Sna_erdre" Content="Erdre" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,10,0" Width="186" Click="btn_Bar_erdre_Click"/>
+                <Button x:Name="bt_Sna_Chat" Content="Chatêau" HorizontalAlignment="Left"  VerticalAlignment="Top" Margin="10,20,10,0" Width="186" Click="btn_Bar_erdre_Click"/>
+                <Button x:Name="bt_Sna_pate" Content="Pâtes" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,30,10,0" Width="186" Click="btn_Bar_erdre_Click"/>
             </StackPanel>
         </GroupBox>
 
         <GroupBox x:Name="gb_vin" Header="VIN" HorizontalAlignment="Left" Margin="397,390,0,0" VerticalAlignment="Top" Height="188" Width="218">
             <StackPanel>
-                <Button x:Name="bt_Vin_Chat" Content="Chatêau" HorizontalAlignment="Left"  VerticalAlignment="Top" Margin="10,30,0,0" Width="186"/>
+                <Button x:Name="bt_Vin_Chat" Content="Chatêau" HorizontalAlignment="Left"  VerticalAlignment="Top" Margin="10,30,0,0" Width="186" Click="btn_Bar_erdre_Click"/>
             </StackPanel>
         </GroupBox>
 
         <GroupBox x:Name="gb_consomable" Header="Consomable" HorizontalAlignment="Left" Margin="723,390,0,0" VerticalAlignment="Top" Height="188" Width="218">
             <StackPanel>
-                <Button x:Name="btn_Con_erdre" Content="Erdre" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,30,10,0" Width="186"/>
-                <Button x:Name="bt_Con_Chat" Content="Chatêau" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,30,10,0" Width="186"/>
+                <Button x:Name="btn_Con_erdre" Content="Erdre" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,30,10,0" Width="186" Click="btn_Bar_erdre_Click"/>
+                <Button x:Name="bt_Con_Chat" Content="Chatêau" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,30,10,0" Width="186" Click="btn_Bar_erdre_Click"/>
             </StackPanel>
         </GroupBox>
 

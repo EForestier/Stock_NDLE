@@ -22,11 +22,38 @@
         </ResourceDictionary>
     </Controls:MetroWindow.Resources>
     <Grid>
-        <Label x:Name="label" Content="Stands" HorizontalAlignment="Left" Margin="36,22,0,0" VerticalAlignment="Top" Width="475" FontSize="30"/>
-
+        <Label x:Name="Titre" Content="Stands" HorizontalAlignment="Left" Margin="36,22,0,0" VerticalAlignment="Top" Width="475" FontSize="30"/>
         
+        
+        <Button x:Name="btn_sortie" Content="Sortie" HorizontalAlignment="Left" Margin="703,90,0,0" VerticalAlignment="Top" Width="75"/>
+
+        <ListBox x:Name="lbox_titre" Height="30" Margin="99,168,95,0" VerticalAlignment="Top" Width="800"  >
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid Margin="0,2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="195" />
+                            <ColumnDefinition Width="200" />
+                            <ColumnDefinition Width="195" />
+                            <ColumnDefinition Width="195" />
+                        </Grid.ColumnDefinitions>
+                        <TextBlock HorizontalAlignment="Left" Text="{Binding article}"/>
+                        <TextBlock HorizontalAlignment="Left" Grid.Column="1" Text="{Binding nbsortie}" />
+                        <TextBlock HorizontalAlignment="left" Grid.Column="2" Text="{Binding stock}" />
+                        <TextBlock HorizontalAlignment="left" Grid.Column="3" Text="{Binding sortie}" />
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        
+        
+        </ListBox>
+
+        <ListBox x:Name="lbox_article" Margin="36,199,32,48" Width="800"/>
+       
+
+
 
 
 
     </Grid>
-    </Controls:MetroWindow>
+</Controls:MetroWindow>
