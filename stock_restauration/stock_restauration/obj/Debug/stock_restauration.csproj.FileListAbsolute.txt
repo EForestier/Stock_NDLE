@@ -50,3 +50,5 @@ C:\Users\Edouard FORESTIER\Documents\GitHub\Stock_NDLE\stock_restauration\stock_
 C:\Users\Edouard FORESTIER\Documents\GitHub\Stock_NDLE\stock_restauration\stock_restauration\obj\Debug\stock_restauration.g.resources
 C:\Users\Edouard FORESTIER\Documents\GitHub\Stock_NDLE\stock_restauration\stock_restauration\obj\Debug\stock_restauration.Properties.Resources.resources
 C:\Users\Edouard FORESTIER\Documents\GitHub\Stock_NDLE\stock_restauration\stock_restauration\obj\Debug\stock_restauration.csproj.GenerateResource.Cache
+C:\Users\Edouard FORESTIER\Documents\GitHub\Stock_NDLE\stock_restauration\stock_restauration\bin\Debug\MySql.Data.dll
+C:\Users\Edouard FORESTIER\Documents\GitHub\Stock_NDLE\stock_restauration\stock_restauration\bin\Debug\MySql.Data.xml

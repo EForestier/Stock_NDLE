@@ -6,7 +6,7 @@
         xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         xmlns:local="clr-namespace:stock_restauration"
         mc:Ignorable="d"
-        Title="Gestion Stock" Height="750" Width="1000" ResizeMode="CanMinimize" Background="#FFF0F0F0" WindowStartupLocation="CenterScreen">
+        Title="Gestion Stock" Height="750" Width="1000" ResizeMode="CanMinimize" Background="#FF292525" WindowStartupLocation="CenterScreen">
 
     <Controls:MetroWindow.Resources>
         <ResourceDictionary>
@@ -16,17 +16,17 @@
                 <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Colors.xaml" />
                 <!-- Accent and AppTheme setting -->
-                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/Blue.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/Red.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/BaseLight.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Controls:MetroWindow.Resources>
-    <Grid>
-        <Label x:Name="label" Content="Nuit De l'Erdre" HorizontalAlignment="Left" Margin="36,22,0,0" VerticalAlignment="Top" Width="475" FontSize="48"/>
+    <Grid Background="#FF292525">
+        <!--<Label x:Name="label" Content="Nuit De l'Erdre" HorizontalAlignment="Left" Margin="36,22,0,0" VerticalAlignment="Top" Width="475" FontSize="48" Background="Black" Foreground="#FFF30000" />-->
 
-        <Button x:Name="btn_benevole" Content="Benevole" HorizontalAlignment="Left" Margin="10,656,0,0" VerticalAlignment="Top" Width="315" FontSize="20" Click="btn_benevole_Click"/>
-        <Button x:Name="btn_organisateur" Content="Organisteur" HorizontalAlignment="Left" Margin="669,656,0,0" VerticalAlignment="Top" Width="315" FontSize="20" Click="btn_organisateur_Click"/>
+        <Button x:Name="btn_benevole" Content="Benevole" HorizontalAlignment="Left" Margin="10,656,0,0" VerticalAlignment="Top" Width="315" FontSize="20" FontFamily="Forte" Click="btn_benevole_Click"/>
+        <Button x:Name="btn_organisateur" Content="Organisteur" HorizontalAlignment="Left" Margin="669,656,0,0" VerticalAlignment="Top" Width="315" FontSize="20" FontFamily="Forte" Click="btn_organisateur_Click"/>
 
-        <Image x:Name="image" HorizontalAlignment="Left" Height="527" Margin="193,101,-70,0" VerticalAlignment="Top" Width="871" Source="NDDL.png"/>
+        <Image x:Name="image" Height="368" Margin="289,159,257,0" VerticalAlignment="Top" Source="ndle.png" OpacityMask="Black"/>
     </Grid>
 </Controls:MetroWindow>
