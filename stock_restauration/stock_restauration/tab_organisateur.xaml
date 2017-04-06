@@ -1,0 +1,76 @@
+﻿<Controls:MetroWindow x:Class="stock_restauration.tab_benevole"
+          xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        xmlns:local="clr-namespace:stock_restauration"
+        mc:Ignorable="d"
+        Title="Gestion Stock" Height="750" Width="1000" ResizeMode="CanMinimize" Background="#FF292525" WindowStartupLocation="CenterScreen">
+
+    <Controls:MetroWindow.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <!-- MahApps.Metro resource dictionaries. Make sure that all file names are Case Sensitive! -->
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Colors.xaml" />
+                <!-- Accent and AppTheme setting -->
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/Red.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/BaseLight.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Controls:MetroWindow.Resources>
+    <Grid>
+        <Label x:Name="Titre" Content="Stands" HorizontalAlignment="Left" Margin="36,22,0,0" VerticalAlignment="Top" Width="475" FontSize="35" FontFamily="Forte"  Foreground="Red"/>
+
+
+        <Button x:Name="btn_sortie" Content="SORTIE" HorizontalAlignment="Left" Margin="703,90,0,0" VerticalAlignment="Top" Width="125"  FontSize="20" FontFamily="Forte" Foreground="Red"/>
+
+        <ListBox x:Name="lbox_titre" Height="25" Margin="99,174,95,0" VerticalAlignment="Top" Width="800" SelectedIndex="0" >
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid Margin="0,2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="195" />
+                            <ColumnDefinition Width="200" />
+                            <ColumnDefinition Width="195" />
+                            <ColumnDefinition Width="195" />
+                        </Grid.ColumnDefinitions>
+                        <TextBlock HorizontalAlignment="Left" Text="{Binding article}"/>
+                        <TextBlock HorizontalAlignment="Left" Grid.Column="1" Text="{Binding nbsortie}" />
+                        <TextBlock HorizontalAlignment="left" Grid.Column="2" Text="{Binding stock}" />
+                        <TextBlock HorizontalAlignment="left" Grid.Column="3" Text="{Binding sortie}" />
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+        <ListBox x:Name="lbox_article" Margin="99,199,95,48" Width="800">
+            <!--<ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid Margin="0,2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="195" />
+                            <ColumnDefinition Width="200" />
+                            <ColumnDefinition Width="195" />
+                            <ColumnDefinition Width="195" />
+                        </Grid.ColumnDefinitions>
+                        <TextBlock HorizontalAlignment="Left" Text="{Binding liste_article}"/>
+                        <TextBox HorizontalAlignment="Left" Grid.Column="1" Text="{Binding liste_nbsortie}" />
+                        <TextBlock HorizontalAlignment="left" Grid.Column="2" Text="{Binding liste_stock}" />
+                        <TextBlock HorizontalAlignment="left" Grid.Column="3" Text="{Binding liste_sortie}" />
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>-->
+        </ListBox>
+        <Rectangle Margin="101,174,98,48" Stroke="Red"/>
+
+
+
+
+
+
+
+    </Grid>
+</Controls:MetroWindow>

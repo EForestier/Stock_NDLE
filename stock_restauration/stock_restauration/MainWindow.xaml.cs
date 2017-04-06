@@ -29,13 +29,16 @@ namespace stock_restauration
 
         private void btn_benevole_Click(object sender, RoutedEventArgs e)
         {
-            benevole wind_bene = new benevole();
-            wind_bene.ShowDialog(); 
+            benevole wind_benevole = new benevole();
+            wind_benevole.ShowDialog(); 
         }
 
         private void btn_organisateur_Click(object sender, RoutedEventArgs e)
         {
-
+            string type = "Organisateur";
+            benevole wind_organisateur = new benevole();
+            MessageBox.Show("Entre mot de passe");
+            wind_organisateur.ShowDialog();
         }
     }
 }
