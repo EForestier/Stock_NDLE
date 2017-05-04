@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 using MahApps.Metro.Controls;
+using System.Windows.Threading;
 
 namespace stock_restauration
 {
@@ -25,6 +26,11 @@ namespace stock_restauration
         public MainWindow()
         {
             InitializeComponent();
+
+            DispatcherTimer timer = new DispatcherTimer();
+            timer.Interval = TimeSpan.FromSeconds(1);
+            timer.Tick += new EventHandler(horloge);
+            timer.Start();
         }
 
         private void btn_benevole_Click(object sender, RoutedEventArgs e)
@@ -35,10 +41,30 @@ namespace stock_restauration
 
         private void btn_organisateur_Click(object sender, RoutedEventArgs e)
         {
-            string type = "Organisateur";
-            benevole wind_organisateur = new benevole();
-            MessageBox.Show("Entre mot de passe");
+           
+            menu_organisateur wind_organisateur = new menu_organisateur();
+            MessageBox.Show("Entrez mot de passe");
             wind_organisateur.ShowDialog();
         }
+
+        private void btn_prog_Click(object sender, RoutedEventArgs e)
+        {
+            programation wind_programation = new programation();
+            wind_programation.ShowDialog();
+        }
+
+        private void btn_conf_Click(object sender, RoutedEventArgs e)
+        {
+            configuration wind_configuration = new configuration();
+            MessageBox.Show("Entrez mot de passe");
+            wind_configuration.ShowDialog();
+        }
+
+        public void horloge (object sender, EventArgs e)
+        {
+            heure.Content = DateTime.Now.ToLongTimeString();
+        }
+
+
     }
 }

@@ -1,0 +1,82 @@
+﻿<Controls:MetroWindow x:Class="stock_restauration.nouveau_article"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        xmlns:local="clr-namespace:stock_restauration"
+        mc:Ignorable="d"
+        Title="Gestion Stock"  Height="750" Width="1000" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" BorderBrush="Red" Background="#FF1C1C29">
+
+    <Controls:MetroWindow.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <!-- MahApps.Metro resource dictionaries. Make sure that all file names are Case Sensitive! -->
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Colors.xaml" />
+                <!-- Accent and AppTheme setting -->
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/Red.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/BaseLight.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Controls:MetroWindow.Resources>
+
+    <Controls:MetroWindow.RightWindowCommands>
+        <Controls:WindowCommands>
+            <Label Name="heure" Content="00:00:00"></Label>
+        </Controls:WindowCommands>
+    </Controls:MetroWindow.RightWindowCommands>
+
+    <Grid Background="#FF1C1C29">
+
+        <Label x:Name="Titre" Content="Nouvel article" HorizontalAlignment="Left" Margin="52,25,0,0" VerticalAlignment="Top" Width="326" FontSize="50" FontFamily="Forte"  Foreground="Red" Height="67"/>
+
+        <!-- ************************************************************************************************-->
+
+        <Label x:Name="lb_article" Content="Article" HorizontalAlignment="Left" Margin="10,139,0,0" VerticalAlignment="Top" Width="108" FontSize="30" FontFamily="Forte"  Foreground="Red" Height="43"/>
+        <TextBox x:Name="tBox_article"  HorizontalAlignment="Left" Height="27" Margin="178,155,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="315" />
+
+        <Label x:Name="lb_quantite" Content="Quantite" HorizontalAlignment="Left" Margin="10,203,0,0" VerticalAlignment="Top" Width="146" FontSize="30" FontFamily="Forte"  Foreground="Red" Height="56"/>
+        <TextBox x:Name="tBox_quantite" HorizontalAlignment="Left" Height="23" Margin="178,221,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="315"/>
+
+        <!-- ************************************************************************************************-->
+
+        <Label x:Name="lb_stand" Content="Stand" HorizontalAlignment="Left" Margin="10,271,0,0" VerticalAlignment="Top" Width="108" FontSize="30" FontFamily="Forte"  Foreground="Red" Height="43"/>
+        <CheckBox x:Name="cb_barbeuck"  Content="Barbeuck" HorizontalAlignment="Left" Margin="52,337,0,0" VerticalAlignment="Top" FontSize="20" FontFamily="Forte"  Foreground="Red" Click="filtrer"/>
+        <CheckBox x:Name="cb_crepe" Content="Crêpe - Galette" HorizontalAlignment="Left" Margin="52,369,0,0" VerticalAlignment="Top" FontSize="20" FontFamily="Forte"  Foreground="Red" Click="filtrer"/>
+        <CheckBox x:Name="cb_gateau" Content="Confiserie - Café" HorizontalAlignment="Left" Margin="52,401,0,0" VerticalAlignment="Top" FontSize="20" FontFamily="Forte"  Foreground="Red" Click="filtrer"/>
+        <CheckBox x:Name="cb_chiken" Content="Chiken Regal" HorizontalAlignment="Left" Margin="260,337,0,0" VerticalAlignment="Top" FontSize="20" FontFamily="Forte"  Foreground="Red" Click="filtrer"/>
+        <CheckBox x:Name="cb_consomable" Content="Economats" HorizontalAlignment="Left" Margin="432,337,0,0" VerticalAlignment="Top" FontSize="20" FontFamily="Forte"  Foreground="Red" Click="filtrer" />
+        <CheckBox x:Name="cb_pate" Content="Pâte" HorizontalAlignment="Left" Margin="260,416,0,0" VerticalAlignment="Top" FontSize="20" FontFamily="Forte"  Foreground="Red" Click="filtrer"/>
+        <CheckBox x:Name="cb_vin" Content="Vin - Formage" HorizontalAlignment="Left" Margin="260,376,0,0" VerticalAlignment="Top" FontSize="20" FontFamily="Forte"  Foreground="Red" Click="filtrer"/>
+
+        <CheckBox x:Name="cb_erdre" Content="Erdre" HorizontalAlignment="Left" Margin="682,337,0,0" VerticalAlignment="Top" FontSize="20" FontFamily="Forte"  Foreground="Red" Click="filtrer"  />
+        <CheckBox x:Name="cb_chateau" Content="Chateau" HorizontalAlignment="Left" Margin="682,376,0,0" VerticalAlignment="Top" FontSize="20" FontFamily="Forte"  Foreground="Red" Click="filtrer" />
+        <!-- ************************************************************************************************-->
+
+        <Button x:Name="btn_nouveau" Content="Ajouter" HorizontalAlignment="Left" Margin="710,240,0,0" VerticalAlignment="Top" Width="242" FontSize="20"  Height="46" FontFamily="Segoe UI Light" Foreground="White" BorderBrush="#FF420808" Click="btn_nouveau_Click" >
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Red" Offset="0"/>
+                    <GradientStop Color="#FFC70000" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+
+
+
+
+
+
+        <Image x:Name="footer" HorizontalAlignment="Left" Height="248" Margin="-24,473,-550,0" VerticalAlignment="Top" Width="1568" Source="footer.png"/>
+       
+
+
+
+
+
+
+
+    </Grid>
+</Controls:MetroWindow>

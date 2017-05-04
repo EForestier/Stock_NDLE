@@ -15,6 +15,7 @@ using MySql.Data;
 using MySql.Data.MySqlClient;
 using System.Data;
 using MahApps.Metro.Controls;
+using System.Windows.Threading;
 
 namespace stock_restauration
 {
@@ -37,9 +38,14 @@ namespace stock_restauration
         {
             InitializeComponent();
 
+            DispatcherTimer timer = new DispatcherTimer();
+            timer.Interval = TimeSpan.FromSeconds(1);
+            timer.Tick += new EventHandler(horloge);
+            timer.Start();
+
             #region Titre tableau
             List<TITRE> items = new List<TITRE>();
-            items.Add(new TITRE() { article = "Article", nbsortie = "Nombre de sortie", stock = "Stock", sortie = "Sortie" });
+            items.Add(new TITRE() { rien1 = "",  article = "Article", nbsortie = "Nombre de sortie",rien = "", stock = "Stock", sortie = "Sortie" });
 
             lbox_titre.ItemsSource = items;
             #endregion
@@ -54,7 +60,7 @@ namespace stock_restauration
      //-------------------------------------------------------------------------------------
      //-------------------------------------------------------------------------------------
 
-        #region Afficher le liste de base et avec les filtres
+        #region Afficher le liste des articles
         private void afficher_liste(string _idStand)
         {
 
@@ -80,46 +86,36 @@ namespace stock_restauration
 
                 while (rdrStock.Read())
                 {
-
-                    //string Article = rdrStock[0].ToString();
-                    //string Stock = rdrStock[0].ToString();
-                    //string Sortie = rdrStock[0].ToString();
-
-                    //List<Liste> items = new List<Liste>();
-                    //items.Add(new Liste() { liste_article = Article,  liste_nbsortie = "", liste_stock = Stock , liste_sortie = Sortie });
-
-                    //lbox_article.ItemsSource = items;
-
+                    
 
                     StackPanel spStock = new StackPanel();
 
                     spStock.Orientation = Orientation.Horizontal;
 
-
+                    Label rien1         = new Label();
                     Label nom           = new Label();
-                    //TextBox nbsotie   = new TextBox();
+                    TextBox nbsotie     = new TextBox();
+                    Label rien          = new Label();
                     Label quantite      = new Label();
                     Label sortie        = new Label();
 
-                    nom.Width          = 395;
-                    //nbsotie.Width    = 200;
-                    quantite.Width     = 195;
-                    sortie.Width       = 195;
-
-                    //nom.HorizontalAlignment = Center;
+                    rien1.Width        = 10;
+                    nom.Width          = 195;
+                    nbsotie.Width      = 200;
+                    rien.Width         = 70;
+                    quantite.Width     = 155;
+                    sortie.Width       = 145;
 
                     Titre.Content = rdrStock[3].ToString();
 
                     nom.Content        = rdrStock[0].ToString();
                     quantite.Content   = rdrStock[1].ToString();
                     sortie.Content     = rdrStock[2].ToString();
-                    //nbsotie.Text       = "";
-                    //nbsotie.Text       = rdrStock[3].ToString();
 
-                    
-
+                    spStock.Children.Add(rien1);
                     spStock.Children.Add(nom);
-                    //spStock.Children.Add(nbsotie);
+                    spStock.Children.Add(nbsotie);
+                    spStock.Children.Add(rien);
                     spStock.Children.Add(quantite);
                     spStock.Children.Add(sortie);
 
@@ -142,8 +138,10 @@ namespace stock_restauration
         #region Afficher le titre
         public class TITRE
         {
+            public string rien1 { get; set; }
             public string article { get; set; }
             public string nbsortie { get; set; }
+            public string rien { get; set; }
             public string stock { get; set; }
             public string sortie { get; set; }
         }
@@ -151,14 +149,20 @@ namespace stock_restauration
 
         //-------------------------------------------------------------------------------------
 
-        #region Afficher le titre
-        public class Liste
+        private void btn_sortie_Click(object sender, RoutedEventArgs e)
         {
-            public string liste_article { get; set; }
-            public string liste_nbsortie { get; set; }
-            public string liste_stock { get; set; }
-            public string liste_sortie { get; set; }
+            MessageBox.Show("Veuillez entre le mot de passe");
+
+           // int nb_sortie = nbsortie;
+
+
         }
-        #endregion
+
+        public void horloge(object sender, EventArgs e)
+        {
+            heure.Content = DateTime.Now.ToLongTimeString();
+        }
+
+
     }
 }

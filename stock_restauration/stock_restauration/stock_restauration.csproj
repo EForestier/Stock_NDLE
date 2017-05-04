@@ -64,10 +64,32 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="configuration.xaml.cs">
+      <DependentUpon>configuration.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="menu_organisateur.xaml.cs">
+      <DependentUpon>menu_organisateur.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="nouveau_article.xaml.cs">
+      <DependentUpon>nouveau_article.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="organisateur.xaml.cs">
+      <DependentUpon>organisateur.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="programation.xaml.cs">
+      <DependentUpon>programation.xaml</DependentUpon>
+    </Compile>
     <Compile Include="tab_benevole.xaml.cs">
       <DependentUpon>tab_benevole.xaml</DependentUpon>
     </Compile>
+    <Compile Include="tab_organisateur.xaml.cs">
+      <DependentUpon>tab_organisateur.xaml</DependentUpon>
+    </Compile>
     <Page Include="benevole.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="configuration.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -86,9 +108,29 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="menu_organisateur.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="nouveau_article.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="organisateur.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="programation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="tab_benevole.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="tab_organisateur.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
   <ItemGroup>
@@ -124,6 +166,30 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="ndle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="footer.png" />
+    <Resource Include="logoville.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="samedi\BROKEN-BACK.png" />
+    <Resource Include="samedi\JULIAN-PERRETTA.png" />
+    <Resource Include="samedi\LITTLE-BIG.png" />
+    <Resource Include="samedi\OFENBACH.png" />
+    <Resource Include="samedi\RODRIGO-Y-GABRIELA.png" />
+    <Resource Include="samedi\THE-PRODIGY.png" />
+    <Resource Include="samedi\TWO-DOOR-CINEMA-CLUB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="vendredi\ALLTTA.png" />
+    <Resource Include="vendredi\BIGLO-OLI.png" />
+    <Resource Include="vendredi\COLOURS-IN-THE-STREET.png" />
+    <Resource Include="vendredi\CREEPING-DEVIL-CACTUS.png" />
+    <Resource Include="vendredi\DATCHA-MANDALA.png" />
+    <Resource Include="vendredi\EL-ROYCE.png" />
+    <Resource Include="vendredi\LAST-TRAIN.png" />
+    <Resource Include="vendredi\lesinsus.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

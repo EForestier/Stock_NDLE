@@ -6,7 +6,7 @@
         xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         xmlns:local="clr-namespace:stock_restauration"
         mc:Ignorable="d"
-        Title="Gestion Stock" Height="750" Width="1000" ResizeMode="CanMinimize" Background="#FF292525" WindowStartupLocation="CenterScreen">
+        Title="Gestion Stock" Height="750" Width="1000" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" BorderBrush="Red" Background="#FF1C1C29">
 
     <Controls:MetroWindow.Resources>
         <ResourceDictionary>
@@ -21,12 +21,37 @@
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Controls:MetroWindow.Resources>
-    <Grid Background="#FF292525">
-        <!--<Label x:Name="label" Content="Nuit De l'Erdre" HorizontalAlignment="Left" Margin="36,22,0,0" VerticalAlignment="Top" Width="475" FontSize="48" Background="Black" Foreground="#FFF30000" />-->
+    
+    <Controls:MetroWindow.RightWindowCommands>
+        <Controls:WindowCommands>
+            <Label Name="heure" Content="00:00:00"></Label> 
+            <Button Content="Programmation"  Click="btn_prog_Click" />
+            <Button Content="Configuration"  Click="btn_conf_Click" />
+        </Controls:WindowCommands>
+    </Controls:MetroWindow.RightWindowCommands>
 
-        <Button x:Name="btn_benevole" Content="Benevole" HorizontalAlignment="Left" Margin="10,656,0,0" VerticalAlignment="Top" Width="315" FontSize="20" FontFamily="Forte" Click="btn_benevole_Click"/>
-        <Button x:Name="btn_organisateur" Content="Organisteur" HorizontalAlignment="Left" Margin="669,656,0,0" VerticalAlignment="Top" Width="315" FontSize="20" FontFamily="Forte" Click="btn_organisateur_Click"/>
+    <Grid Background="#FF1C1C29">
 
-        <Image x:Name="image" Height="368" Margin="289,159,257,0" VerticalAlignment="Top" Source="ndle.png" OpacityMask="Black"/>
+        <Button x:Name="btn_benevole" Content="Benevole" HorizontalAlignment="Left" Margin="110,346,0,0" VerticalAlignment="Top" Width="316" FontSize="40"  Height="71" BorderBrush="#FF420808" Foreground="White" FontFamily="Segoe UI Light" Click="btn_benevole_Click" >
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Red" Offset="0"/>
+                    <GradientStop Color="#FFC70000" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btn_organisateur" Content="Organisteur" HorizontalAlignment="Left" Margin="554,346,0,0" VerticalAlignment="Top" Width="330" FontSize="40"  Height="71" FontFamily="Segoe UI Light" Foreground="White" BorderBrush="#FF420808" Click="btn_organisateur_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Red" Offset="0"/>
+                    <GradientStop Color="#FFC70000" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+
+        <Image x:Name="footer" HorizontalAlignment="Left" Height="248" Margin="-28,473,-546,0" VerticalAlignment="Top" Width="1568" Source="footer.png"/>
+        <Image x:Name="logo" HorizontalAlignment="Left" Height="166" Margin="-323,93,-310,0" VerticalAlignment="Top" Width="1627" Source="logoville.png"/>
+
     </Grid>
+    
 </Controls:MetroWindow>
