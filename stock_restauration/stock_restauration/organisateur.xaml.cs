@@ -88,36 +88,36 @@ namespace stock_restauration
 
         private void btn_Gat_chat_Click(object sender, RoutedEventArgs e)
         {
-            tab_organisateur wind_Gat_er = new tab_organisateur("8");
-            wind_Gat_er.ShowDialog();
+            tab_organisateur wind_Gat_erdre = new tab_organisateur("7");
+            wind_Gat_erdre.ShowDialog();
         }
         #endregion
 
         #region Snack
         private void btn_Sna_erdre_Click(object sender, RoutedEventArgs e)
         {
-            tab_organisateur wind_San_er = new tab_organisateur("4");
-            wind_San_er.ShowDialog();
+            tab_organisateur wind_San_erdre = new tab_organisateur("4");
+            wind_San_erdre.ShowDialog();
         }
 
         private void btn_Sna_Chat_Click_1(object sender, RoutedEventArgs e)
         {
-            tab_organisateur wind_San_er = new tab_organisateur("9");
-            wind_San_er.ShowDialog();
+            tab_organisateur wind_San_erdre = new tab_organisateur("9");
+            wind_San_erdre.ShowDialog();
         }
 
         private void btn_Sna_pate_Click(object sender, RoutedEventArgs e)
         {
-            tab_organisateur wind_San_er = new tab_organisateur("11");
-            wind_San_er.ShowDialog();
+            tab_organisateur wind_San_erdre = new tab_organisateur("11");
+            wind_San_erdre.ShowDialog();
         }
         #endregion
 
         #region Vin
         private void btn_Vin_chat_Click(object sender, RoutedEventArgs e)
         {
-            tab_organisateur wind_Vin_er = new tab_organisateur("12");
-            wind_Vin_er.ShowDialog();
+            tab_organisateur wind_Vin_erdre = new tab_organisateur("12");
+            wind_Vin_erdre.ShowDialog();
         }
         
         #endregion
@@ -125,14 +125,14 @@ namespace stock_restauration
         #region Consomable
         private void btn_Con_erdre_Click(object sender, RoutedEventArgs e)
         {
-            tab_organisateur wind_Con_er = new tab_organisateur("5");
-            wind_Con_er.ShowDialog();
+            tab_organisateur wind_Con_erdre = new tab_organisateur("5");
+            wind_Con_erdre.ShowDialog();
         }
 
         private void btn_Con_chat_Click(object sender, RoutedEventArgs e)
         {
-            tab_organisateur wind_Con_er = new tab_organisateur("10");
-            wind_Con_er.ShowDialog();
+            tab_organisateur wind_Con_erdre = new tab_organisateur("10");
+            wind_Con_erdre.ShowDialog();
         }
         #endregion
 

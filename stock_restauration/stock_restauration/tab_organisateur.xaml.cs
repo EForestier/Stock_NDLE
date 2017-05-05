@@ -25,6 +25,7 @@ namespace stock_restauration
     {
 
         private MySql.Data.MySqlClient.MySqlConnection conn;
+       
 
 
         string myConnectionString = "server = 127.0.0.1;"
@@ -39,7 +40,7 @@ namespace stock_restauration
 
             #region Titre tableau
             List<TITRE> items = new List<TITRE>();
-            items.Add(new TITRE() { check = "" ,article = "Article", nbsortie = "Nombre de sortie", rien = "", stock = "Stock", sortie = "Sortie" });
+            items.Add(new TITRE() { rien1 = "" ,article = "Article",  rien = "", stock = "Stock", sortie = "Sortie" });
 
             lbox_titre.ItemsSource = items;
             #endregion
@@ -67,7 +68,7 @@ namespace stock_restauration
                 #region Recuperation des données
                 MySqlCommand cmd = new MySqlCommand();
 
-                cmd.CommandText = "SELECT nom, qte, sortie, stand.nom_stand FROM `article` JOIN stand ON article.id_stand = stand.id WHERE id_stand = " + _idStand;
+                cmd.CommandText = "SELECT article.id, nom, qte, sortie, stand.nom_stand FROM `article` JOIN stand ON article.id_stand = stand.id WHERE id_stand = " + _idStand;
                 cmd.Connection = conn;
                 MySqlDataReader rdrStock = cmd.ExecuteReader();
 
@@ -86,32 +87,62 @@ namespace stock_restauration
 
                     spStock.Orientation = Orientation.Horizontal;
 
-                    CheckBox sup        = new CheckBox();
+                    Button btn_sup      = new Button();
+                    Button btn_ajout    = new Button();
+                    Button btn_sortie   = new Button();
+                    Label rien3         = new Label();
                     Label nom           = new Label();
                     TextBox nbsortie    = new TextBox();
                     Label rien          = new Label();
+                    Label rien1         = new Label();
+                    Label rien2         = new Label();
                     Label quantite      = new Label();
                     Label sortie        = new Label();
 
-                    sup.Width          = 30;
-                    nom.Width          = 195;
+                    rien3.Width        = 5;
+                    nom.Width          = 170;
                     rien.Width         = 15;
                     nbsortie.Width     = 200;
-                    quantite.Width     = 195;
-                    sortie.Width       = 175;
+                    quantite.Width     = 170;
+                    sortie.Width       = 160;
 
-                    Titre.Content = rdrStock[3].ToString();
+                    btn_ajout.Width    = 80;
+                    rien1.Width        = 5;
+                    btn_sortie.Width   = 80;
+                    rien2.Width        = 15;
+                    btn_sup.Width      = 80;
+                  
+
+                    Titre.Content = rdrStock[4].ToString();
+
+                    btn_ajout.Content = "Ajouer";
+                    btn_ajout.Tag = rdrStock[0].ToString();
+                    btn_ajout.Click += btn_suprimmer_Click;
+
+                    btn_sup.Content        = "Supprimer" ;
+                    btn_sup.Tag            = rdrStock[0].ToString();
+                    btn_sup.Click        += btn_suprimmer_Click;
                     
-                    nom.Content        = rdrStock[0].ToString();
-                    quantite.Content   = rdrStock[1].ToString();
-                    sortie.Content     = rdrStock[2].ToString();
-                   
-                    spStock.Children.Add(sup);
+                    btn_sortie.Content = "Sortie";
+                    btn_sortie.Tag = rdrStock[0].ToString();
+                    btn_sortie.Click += btn_suprimmer_Click;
+
+                    nom.Content        = rdrStock[1].ToString();
+                    quantite.Content   = rdrStock[2].ToString();
+                    sortie.Content     = rdrStock[3].ToString();
+
+                    spStock.Children.Add(rien3);
                     spStock.Children.Add(nom);
-                    spStock.Children.Add(nbsortie);
                     spStock.Children.Add(rien);
                     spStock.Children.Add(quantite);
                     spStock.Children.Add(sortie);
+
+                    spStock.Children.Add(btn_ajout);
+                    spStock.Children.Add(rien1);
+                    spStock.Children.Add(btn_sortie);
+                    spStock.Children.Add(rien2);
+                    spStock.Children.Add(btn_sup);
+                    
 
                     lbox_article.Items.Add(spStock);
 
@@ -132,9 +163,8 @@ namespace stock_restauration
         #region Afficher le titre
         public class TITRE
         {
-            public string check { get; set; }
+            public string rien1 { get; set; }
             public string article { get; set; }
-            public string nbsortie { get; set; }
             public string rien { get; set; }
             public string stock { get; set; }
             public string sortie { get; set; }
@@ -153,9 +183,27 @@ namespace stock_restauration
         private void btn_suprimmer_Click(object sender, RoutedEventArgs e)
         {
 
+            Button btn = sender as Button;
+           
+            int id_article = Int32.Parse(btn.Tag.ToString());
 
+            conn = new MySql.Data.MySqlClient.MySqlConnection(myConnectionString);
+            conn.Open();
 
+            MySqlCommand cmd = new MySqlCommand();
+
+            cmd.CommandText = "DELETE FROM `article` WHERE `article`.`id` = @Article_id";
+
+            cmd.Parameters.AddWithValue("@Article_id", id_article);
+
+            cmd.ExecuteNonQuery();
+            cmd.Parameters.Clear();
+            MessageBox.Show("Article supprimé avec succès.");
+
+            conn.Close();
+            
 
         }
+    
     }
 }

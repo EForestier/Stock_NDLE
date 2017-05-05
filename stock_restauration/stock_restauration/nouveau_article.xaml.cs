@@ -94,7 +94,7 @@ namespace stock_restauration
             #region Parametre filtre requete " CHATEAU "
 
             //Barbeuck = 6
-            if ((cb_chateau.IsChecked == true) && (cb_chateau.IsChecked == true))
+            if ((cb_barbeuck.IsChecked == true) && (cb_chateau.IsChecked == true))
             {
                 cmd.Parameters.AddWithValue("@id_stand", 6);
             }  
