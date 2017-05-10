@@ -33,11 +33,11 @@ namespace stock_restauration
             timer.Start();
         }
 
-        private void btn_benevole_Click(object sender, RoutedEventArgs e)
-        {
-            benevole wind_benevole = new benevole();
-            wind_benevole.ShowDialog(); 
-        }
+        //private void btn_benevole_Click(object sender, RoutedEventArgs e)
+        //{
+        //    benevole wind_benevole = new benevole();
+        //    wind_benevole.ShowDialog(); 
+        //}
 
         private void btn_organisateur_Click(object sender, RoutedEventArgs e)
         {

@@ -64,6 +64,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ajout.xaml.cs">
+      <DependentUpon>ajout.xaml</DependentUpon>
+    </Compile>
     <Compile Include="configuration.xaml.cs">
       <DependentUpon>configuration.xaml</DependentUpon>
     </Compile>
@@ -79,15 +82,15 @@
     <Compile Include="programation.xaml.cs">
       <DependentUpon>programation.xaml</DependentUpon>
     </Compile>
-    <Compile Include="tab_benevole.xaml.cs">
-      <DependentUpon>tab_benevole.xaml</DependentUpon>
+    <Compile Include="sortie.xaml.cs">
+      <DependentUpon>sortie.xaml</DependentUpon>
     </Compile>
     <Compile Include="tab_organisateur.xaml.cs">
       <DependentUpon>tab_organisateur.xaml</DependentUpon>
     </Compile>
-    <Page Include="benevole.xaml">
-      <SubType>Designer</SubType>
+    <Page Include="ajout.xaml">
       <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="configuration.xaml">
       <SubType>Designer</SubType>
@@ -100,9 +103,6 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="benevole.xaml.cs">
-      <DependentUpon>benevole.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -124,9 +124,9 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="tab_benevole.xaml">
-      <SubType>Designer</SubType>
+    <Page Include="sortie.xaml">
       <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="tab_organisateur.xaml">
       <Generator>MSBuild:Compile</Generator>

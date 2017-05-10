@@ -26,7 +26,7 @@ namespace stock_restauration
 
         private MySql.Data.MySqlClient.MySqlConnection conn;
        
-
+        
 
         string myConnectionString = "server = 127.0.0.1;"
                                     + "uid = root;"
@@ -56,7 +56,7 @@ namespace stock_restauration
         //-------------------------------------------------------------------------------------
 
         #region Afficher le liste des articless
-        private void afficher_liste(string _idStand)
+        public void afficher_liste(string _idStand)
         {
 
             conn = new MySql.Data.MySqlClient.MySqlConnection(myConnectionString);
@@ -117,15 +117,15 @@ namespace stock_restauration
 
                     btn_ajout.Content = "Ajouer";
                     btn_ajout.Tag = rdrStock[0].ToString();
-                    btn_ajout.Click += btn_suprimmer_Click;
+                   btn_ajout.Click += btn_ajouter_Click;
 
                     btn_sup.Content        = "Supprimer" ;
                     btn_sup.Tag            = rdrStock[0].ToString();
-                    btn_sup.Click        += btn_suprimmer_Click;
+                   // btn_sup.Click        += btn_sortie_Click;
                     
                     btn_sortie.Content = "Sortie";
                     btn_sortie.Tag = rdrStock[0].ToString();
-                    btn_sortie.Click += btn_suprimmer_Click;
+                    btn_sortie.Click += btn_sortie_Click;
 
                     nom.Content        = rdrStock[1].ToString();
                     quantite.Content   = rdrStock[2].ToString();
@@ -153,8 +153,6 @@ namespace stock_restauration
             catch { }
 
             conn.Close();
-
-
         }
         #endregion
 
@@ -174,36 +172,33 @@ namespace stock_restauration
         //-------------------------------------------------------------------------------------
 
 
-        private void btn_sortie_Click(object sender, RoutedEventArgs e)
+        private void btn_sortie_Click(object sender, RoutedEventArgs e )
         {
+            Button btn = (Button)sender;
 
+            int idarticle = Int32.Parse(btn.Tag.ToString());
+            try
+            {
+                sortie action_sortie = new sortie(idarticle, this);
+                action_sortie.ShowDialog();
+            }
+
+            catch { this.Close(); }
         }
 
-
-        private void btn_suprimmer_Click(object sender, RoutedEventArgs e)
+        private void btn_ajouter_Click(object sender, RoutedEventArgs e)
         {
+            Button btn = (Button)sender;
 
-            Button btn = sender as Button;
-           
-            int id_article = Int32.Parse(btn.Tag.ToString());
+            int idarticle = Int32.Parse(btn.Tag.ToString());
+            try
+            {
+                ajout action_ajout = new ajout(idarticle, this);
+                action_ajout.ShowDialog();
+            }
 
-            conn = new MySql.Data.MySqlClient.MySqlConnection(myConnectionString);
-            conn.Open();
-
-            MySqlCommand cmd = new MySqlCommand();
-
-            cmd.CommandText = "DELETE FROM `article` WHERE `article`.`id` = @Article_id";
-
-            cmd.Parameters.AddWithValue("@Article_id", id_article);
-
-            cmd.ExecuteNonQuery();
-            cmd.Parameters.Clear();
-            MessageBox.Show("Article supprimé avec succès.");
-
-            conn.Close();
-            
-
+            catch { this.Close(); }
         }
-    
+
     }
 }
