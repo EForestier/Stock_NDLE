@@ -23,6 +23,8 @@ namespace stock_restauration
     /// </summary>
     public partial class MainWindow :MetroWindow
     {
+
+
         public MainWindow()
         {
             InitializeComponent();
@@ -31,6 +33,8 @@ namespace stock_restauration
             timer.Interval = TimeSpan.FromSeconds(1);
             timer.Tick += new EventHandler(horloge);
             timer.Start();
+
+            
         }
 
         //private void btn_benevole_Click(object sender, RoutedEventArgs e)
@@ -42,9 +46,12 @@ namespace stock_restauration
         private void btn_organisateur_Click(object sender, RoutedEventArgs e)
         {
            
-            menu_organisateur wind_organisateur = new menu_organisateur();
-            MessageBox.Show("Entrez mot de passe");
-            wind_organisateur.ShowDialog();
+           
+            mdp.mot_passe wind_mdp = new mdp.mot_passe();
+
+            wind_mdp.ShowDialog();
+            
+           
         }
 
         private void btn_prog_Click(object sender, RoutedEventArgs e)

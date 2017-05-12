@@ -70,6 +70,9 @@
     <Compile Include="configuration.xaml.cs">
       <DependentUpon>configuration.xaml</DependentUpon>
     </Compile>
+    <Compile Include="mdp\mot_passe.xaml.cs">
+      <DependentUpon>mot_passe.xaml</DependentUpon>
+    </Compile>
     <Compile Include="menu_organisateur.xaml.cs">
       <DependentUpon>menu_organisateur.xaml</DependentUpon>
     </Compile>
@@ -84,6 +87,9 @@
     </Compile>
     <Compile Include="sortie.xaml.cs">
       <DependentUpon>sortie.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="supprime.xaml.cs">
+      <DependentUpon>supprime.xaml</DependentUpon>
     </Compile>
     <Compile Include="tab_organisateur.xaml.cs">
       <DependentUpon>tab_organisateur.xaml</DependentUpon>
@@ -108,6 +114,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="mdp\mot_passe.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="menu_organisateur.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -125,6 +135,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="sortie.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="supprime.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

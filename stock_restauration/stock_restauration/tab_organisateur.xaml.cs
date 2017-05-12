@@ -15,6 +15,7 @@ using MySql.Data;
 using MySql.Data.MySqlClient;
 using System.Data;
 using MahApps.Metro.Controls;
+using System.Threading;
 
 namespace stock_restauration
 {
@@ -24,10 +25,9 @@ namespace stock_restauration
     public partial class tab_organisateur : MetroWindow
     {
 
+        
         private MySql.Data.MySqlClient.MySqlConnection conn;
        
-        
-
         string myConnectionString = "server = 127.0.0.1;"
                                     + "uid = root;"
                                     + "pwd = ;"
@@ -45,8 +45,6 @@ namespace stock_restauration
             lbox_titre.ItemsSource = items;
             #endregion
 
-           
-
             afficher_liste(_idStand);
 
 
@@ -55,7 +53,8 @@ namespace stock_restauration
         //-------------------------------------------------------------------------------------
         //-------------------------------------------------------------------------------------
 
-        #region Afficher le liste des articless
+       
+        #region Afficher le liste des articles
         public void afficher_liste(string _idStand)
         {
 
@@ -115,17 +114,17 @@ namespace stock_restauration
 
                     Titre.Content = rdrStock[4].ToString();
 
-                    btn_ajout.Content = "Ajouer";
-                    btn_ajout.Tag = rdrStock[0].ToString();
-                   btn_ajout.Click += btn_ajouter_Click;
+                    btn_ajout.Content   = "Ajouer";
+                    btn_ajout.Tag       = rdrStock[0].ToString();
+                    btn_ajout.Click    += btn_ajouter_Click;
 
-                    btn_sup.Content        = "Supprimer" ;
-                    btn_sup.Tag            = rdrStock[0].ToString();
-                   // btn_sup.Click        += btn_sortie_Click;
+                    btn_sup.Content     = "Supprimer" ;
+                    btn_sup.Tag         = rdrStock[0].ToString();
+                    btn_sup.Click      += btn_supp_Click;
                     
                     btn_sortie.Content = "Sortie";
-                    btn_sortie.Tag = rdrStock[0].ToString();
-                    btn_sortie.Click += btn_sortie_Click;
+                    btn_sortie.Tag     = rdrStock[0].ToString();
+                    btn_sortie.Click  += btn_sortie_Click;
 
                     nom.Content        = rdrStock[1].ToString();
                     quantite.Content   = rdrStock[2].ToString();
@@ -156,7 +155,7 @@ namespace stock_restauration
         }
         #endregion
 
-    //-------------------------------------------------------------------------------------
+        //-------------------------------------------------------------------------------------
         
         #region Afficher le titre
         public class TITRE
@@ -171,11 +170,12 @@ namespace stock_restauration
 
         //-------------------------------------------------------------------------------------
 
-
+        #region Bouton "Sortie
         private void btn_sortie_Click(object sender, RoutedEventArgs e )
         {
             Button btn = (Button)sender;
 
+           
             int idarticle = Int32.Parse(btn.Tag.ToString());
             try
             {
@@ -185,7 +185,9 @@ namespace stock_restauration
 
             catch { this.Close(); }
         }
+        #endregion
 
+        #region Bouton "Ajouté"
         private void btn_ajouter_Click(object sender, RoutedEventArgs e)
         {
             Button btn = (Button)sender;
@@ -199,6 +201,23 @@ namespace stock_restauration
 
             catch { this.Close(); }
         }
+        #endregion
 
+        #region Bouton "Supprimé"
+        private void btn_supp_Click(object sender, RoutedEventArgs e)
+        {
+            Button btn = (Button)sender;
+
+            int idarticle = Int32.Parse(btn.Tag.ToString());
+            try
+            {
+                supprime action_supp = new supprime(idarticle, this);
+                action_supp.ShowDialog();
+            }
+
+            catch { this.Close(); }
+
+        }
+        #endregion
     }
 }

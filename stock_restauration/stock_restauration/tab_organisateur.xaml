@@ -64,12 +64,5 @@
 
         <Rectangle Margin="99,174,95,48" Stroke="Red"/>
 
-
-
-
-
-
-
-
     </Grid>
 </Controls:MetroWindow>
