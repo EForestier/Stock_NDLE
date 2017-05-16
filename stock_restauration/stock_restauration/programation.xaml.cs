@@ -24,5 +24,13 @@ namespace stock_restauration
         {
             InitializeComponent();
         }
+
+       
+        private void image1_MouseLeave(object sender, MouseEventArgs e)
+        {
+            gBox_artiste_1_V.Content = "BIGLO-OLI.png";
+
+
+        }
     }
 }

@@ -22,19 +22,8 @@
         </ResourceDictionary>
     </Controls:MetroWindow.Resources>
 
-    <Grid Background="#FF1C1C29">
-        <Label x:Name="Titre" Content="Stands" HorizontalAlignment="Left" Margin="36,22,0,0" VerticalAlignment="Top" Width="475" FontSize="50" FontFamily="Forte"  Foreground="Red"/>
-
-
-
-        <Button x:Name="btn_nouveau" Content="Nouvel Article" HorizontalAlignment="Left" Margin="727,108,0,0" VerticalAlignment="Top" Width="139"  BorderBrush="#FF420808" Foreground="White" FontFamily="Segoe UI Light" FontSize="15" Height="32">
-            <Button.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="Red" Offset="0"/>
-                    <GradientStop Color="#FFC70000" Offset="1"/>
-                </LinearGradientBrush>
-            </Button.Background>
-        </Button>
+    <Grid Background="Black">
+        <Label x:Name="Titre" Content="Stands" HorizontalAlignment="Left" Margin="36,22,0,0" VerticalAlignment="Top" Width="475" FontSize="50" FontFamily="Forte"  Foreground="Red" Background="Black"/>
 
 
         <ListBox x:Name="lbox_titre" Height="25" Margin="99,174,95,0" VerticalAlignment="Top" Width="840" SelectedIndex="0" >

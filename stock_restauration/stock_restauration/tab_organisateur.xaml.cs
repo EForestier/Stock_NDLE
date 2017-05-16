@@ -52,7 +52,6 @@ namespace stock_restauration
 
         //-------------------------------------------------------------------------------------
         //-------------------------------------------------------------------------------------
-
        
         #region Afficher le liste des articles
         public void afficher_liste(string _idStand)
@@ -169,6 +168,21 @@ namespace stock_restauration
         #endregion
 
         //-------------------------------------------------------------------------------------
+        #region Bouton "Ajouté"
+        private void btn_ajouter_Click(object sender, RoutedEventArgs e)
+        {
+            Button btn = (Button)sender;
+
+            int idarticle = Int32.Parse(btn.Tag.ToString());
+            try
+            {
+                ajout action_ajout = new ajout(idarticle, this);
+                action_ajout.ShowDialog();
+            }
+
+            catch { this.Close(); }
+        }
+        #endregion
 
         #region Bouton "Sortie
         private void btn_sortie_Click(object sender, RoutedEventArgs e )
@@ -181,22 +195,6 @@ namespace stock_restauration
             {
                 sortie action_sortie = new sortie(idarticle, this);
                 action_sortie.ShowDialog();
-            }
-
-            catch { this.Close(); }
-        }
-        #endregion
-
-        #region Bouton "Ajouté"
-        private void btn_ajouter_Click(object sender, RoutedEventArgs e)
-        {
-            Button btn = (Button)sender;
-
-            int idarticle = Int32.Parse(btn.Tag.ToString());
-            try
-            {
-                ajout action_ajout = new ajout(idarticle, this);
-                action_ajout.ShowDialog();
             }
 
             catch { this.Close(); }

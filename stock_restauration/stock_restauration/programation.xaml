@@ -39,7 +39,7 @@
 
 
         <GroupBox x:Name="gBox_artiste_1_V" Header="Les insus" HorizontalAlignment="Left" Margin="57,93,0,0"   VerticalAlignment="Top" Height="139" Width="210">
-            <Image x:Name="image1" Margin="-1" Source="vendredi/lesinsus.jpg"/>
+            <Image x:Name="image1" Margin="-1" Source="vendredi/lesinsus.jpg" MouseMove="image1_MouseLeave"/>
         </GroupBox>
         <GroupBox x:Name="gBox_artiste_2_V" Header="Bigflo oli" HorizontalAlignment="Left" Margin="282,93,0,0"  VerticalAlignment="Top" Height="139" Width="210">
             <Image x:Name="image2" Margin="-1" Source="vendredi/BIGLO-OLI.png"/>

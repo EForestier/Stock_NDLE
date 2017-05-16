@@ -40,6 +40,9 @@ namespace stock_restauration.mdp
             InitializeComponent();
 
             lb_phrase.Content = "Veuillez entrée votre mot de passe";
+            tbox_mdp.Text = "";
+           // tbox_mdp.t = '*';
+
             
         }
 
@@ -62,19 +65,22 @@ namespace stock_restauration.mdp
             while (rdrMdp.Read())
             {
                 _mdp = rdrMdp[1].ToString();
-                label.Content = rdrMdp[1].ToString();
+                
             }
 
             if (tbox_mdp.Text == _mdp)
             {
                 verif = true;
+                this.Close();
                 menu_organisateur wind_organisateur = new menu_organisateur();
                 wind_organisateur.ShowDialog();
             }
             else
             {
+
                 verif = false;
                 MessageBox.Show("mot de passe incorrect");
+                tbox_mdp.Text = "";
             }
 
 

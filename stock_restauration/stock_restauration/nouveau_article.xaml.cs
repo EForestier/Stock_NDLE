@@ -129,6 +129,7 @@ namespace stock_restauration
             cmd.ExecuteNonQuery();
             cmd.Parameters.Clear();
             MessageBox.Show("Article ajouté avec succès.");
+            raz_paramettre();
             conn.Close();
 
         }
@@ -227,6 +228,23 @@ namespace stock_restauration
             heure.Content = DateTime.Now.ToLongTimeString();
         }
 
-       
+        public void raz_paramettre()
+        {
+            tBox_article.Text   = "";
+            tBox_quantite.Text  = "";
+
+            cb_barbeuck.IsChecked    = false;
+            cb_crepe.IsChecked       = false;
+            cb_gateau.IsChecked      = false;
+            cb_chiken.IsChecked      = false;
+            cb_vin.IsChecked         = false;
+            cb_pate.IsChecked        = false;
+            cb_consomable.IsChecked  = false;
+
+            cb_erdre.IsChecked       = false;
+            cb_chateau.IsChecked     = false;
+        }
+
+
     }
 }

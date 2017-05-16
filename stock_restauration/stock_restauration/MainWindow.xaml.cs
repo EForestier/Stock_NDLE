@@ -37,21 +37,18 @@ namespace stock_restauration
             
         }
 
-        //private void btn_benevole_Click(object sender, RoutedEventArgs e)
-        //{
-        //    benevole wind_benevole = new benevole();
-        //    wind_benevole.ShowDialog(); 
-        //}
+        private void btn_benevole_Click(object sender, RoutedEventArgs e)
+        {
+            organisateur wind_stand = new organisateur();
+            int ajout_btn = 1;
+            int supp_btn  = 2;
+            wind_stand.ShowDialog();
+        }
 
         private void btn_organisateur_Click(object sender, RoutedEventArgs e)
         {
-           
-           
             mdp.mot_passe wind_mdp = new mdp.mot_passe();
-
-            wind_mdp.ShowDialog();
-            
-           
+            wind_mdp.ShowDialog();        
         }
 
         private void btn_prog_Click(object sender, RoutedEventArgs e)
@@ -63,7 +60,8 @@ namespace stock_restauration
         private void btn_conf_Click(object sender, RoutedEventArgs e)
         {
             configuration wind_configuration = new configuration();
-            MessageBox.Show("Entrez mot de passe");
+            mdp.mot_passe wind_mdp = new mdp.mot_passe();
+            wind_mdp.ShowDialog();
             wind_configuration.ShowDialog();
         }
 
