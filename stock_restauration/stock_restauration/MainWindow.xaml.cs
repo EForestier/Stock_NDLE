@@ -40,8 +40,7 @@ namespace stock_restauration
         private void btn_benevole_Click(object sender, RoutedEventArgs e)
         {
             organisateur wind_stand = new organisateur();
-            int ajout_btn = 1;
-            int supp_btn  = 2;
+           
             wind_stand.ShowDialog();
         }
 

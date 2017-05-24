@@ -22,7 +22,7 @@
         </ResourceDictionary>
     </Controls:MetroWindow.Resources>
 
-    <Grid Background="Black">
+    <Grid Background="#FF1C1C29">
         <Label x:Name="Titre" Content="Stands" HorizontalAlignment="Left" Margin="36,22,0,0" VerticalAlignment="Top" Width="475" FontSize="50" FontFamily="Forte"  Foreground="Red" Background="Black"/>
 
 

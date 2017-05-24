@@ -20,6 +20,8 @@ namespace stock_restauration
     /// </summary>
     public partial class programation : MetroWindow
     {
+       
+
         public programation()
         {
             InitializeComponent();
@@ -28,8 +30,13 @@ namespace stock_restauration
        
         private void image1_MouseLeave(object sender, MouseEventArgs e)
         {
-            gBox_artiste_1_V.Content = "BIGLO-OLI.png";
+            //gBox_artiste_1_V.Content =image11;
+            image1 = image11;
 
+        }
+        private void image2_MouseLeave(object sender, MouseEventArgs e)
+        {
+            gBox_artiste_2_V.Content = image22;
 
         }
     }

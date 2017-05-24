@@ -110,11 +110,12 @@ namespace stock_restauration
                     rien2.Width        = 15;
                     btn_sup.Width      = 80;
                   
-
+                    
                     Titre.Content = rdrStock[4].ToString();
 
                     btn_ajout.Content   = "Ajouer";
                     btn_ajout.Tag       = rdrStock[0].ToString();
+                    
                     btn_ajout.Click    += btn_ajouter_Click;
 
                     btn_sup.Content     = "Supprimer" ;
@@ -171,6 +172,7 @@ namespace stock_restauration
         #region Bouton "Ajouté"
         private void btn_ajouter_Click(object sender, RoutedEventArgs e)
         {
+            
             Button btn = (Button)sender;
 
             int idarticle = Int32.Parse(btn.Tag.ToString());

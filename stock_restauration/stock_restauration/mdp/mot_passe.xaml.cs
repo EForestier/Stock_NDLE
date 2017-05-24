@@ -40,7 +40,7 @@ namespace stock_restauration.mdp
             InitializeComponent();
 
             lb_phrase.Content = "Veuillez entrée votre mot de passe";
-            tbox_mdp.Text = "";
+            tbox_mdp.Password = "";
            // tbox_mdp.t = '*';
 
             
@@ -68,7 +68,7 @@ namespace stock_restauration.mdp
                 
             }
 
-            if (tbox_mdp.Text == _mdp)
+            if (tbox_mdp.Password == _mdp)
             {
                 verif = true;
                 this.Close();
@@ -80,7 +80,7 @@ namespace stock_restauration.mdp
 
                 verif = false;
                 MessageBox.Show("mot de passe incorrect");
-                tbox_mdp.Text = "";
+                tbox_mdp.Password = "";
             }
 
 
