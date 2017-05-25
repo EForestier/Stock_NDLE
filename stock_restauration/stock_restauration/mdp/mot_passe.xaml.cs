@@ -25,7 +25,7 @@ namespace stock_restauration.mdp
     {
         string _mdp;
         private bool verif = false;
-
+        int btn_bene;
         private MySql.Data.MySqlClient.MySqlConnection conn;
 
         string myConnectionString = "server = 127.0.0.1;"
@@ -41,7 +41,7 @@ namespace stock_restauration.mdp
 
             lb_phrase.Content = "Veuillez entrée votre mot de passe";
             tbox_mdp.Password = "";
-           // tbox_mdp.t = '*';
+           
 
             
         }
@@ -74,6 +74,9 @@ namespace stock_restauration.mdp
                 this.Close();
                 menu_organisateur wind_organisateur = new menu_organisateur();
                 wind_organisateur.ShowDialog();
+
+                organisateur win_orga = new organisateur();
+                win_orga.ShowDialog();
             }
             else
             {
@@ -83,7 +86,24 @@ namespace stock_restauration.mdp
                 tbox_mdp.Password = "";
             }
 
+            if(btn_bene == 2)
+            {
+                if (tbox_mdp.Password == _mdp)
+                {
+                    verif = true;
+                    this.Close();
+              
+                    organisateur win_orga = new organisateur();
+                    win_orga.ShowDialog();
+                }
+                else
+                {
 
+                    verif = false;
+                    MessageBox.Show("mot de passe incorrect");
+                    tbox_mdp.Password = "";
+                }
+            }
         }
     }
 }

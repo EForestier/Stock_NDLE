@@ -31,7 +31,7 @@ namespace stock_restauration
         private void image1_MouseLeave(object sender, MouseEventArgs e)
         {
             //gBox_artiste_1_V.Content =image11;
-            image1 = image11;
+            gBox_artiste_1_V.Content = image11;
 
         }
         private void image2_MouseLeave(object sender, MouseEventArgs e)

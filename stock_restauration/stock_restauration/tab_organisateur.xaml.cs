@@ -24,8 +24,8 @@ namespace stock_restauration
     /// </summary>
     public partial class tab_organisateur : MetroWindow
     {
+        public delegate void D_liste();
 
-        
         private MySql.Data.MySqlClient.MySqlConnection conn;
        
         string myConnectionString = "server = 127.0.0.1;"
@@ -45,16 +45,33 @@ namespace stock_restauration
             lbox_titre.ItemsSource = items;
             #endregion
 
-            afficher_liste(_idStand);
+            //Thread liste = new Thread(Refresh(_idStand));
+            //liste.Start();
+
+            //afficher_liste(_idStand);
 
 
         }
 
         //-------------------------------------------------------------------------------------
         //-------------------------------------------------------------------------------------
-       
+
+        //#region Methode Refresh
+        //private void Refresh(string _idStand)
+        //{
+        //    while (true)
+        //    {
+        //        Dispatcher.Invoke((D_liste)afficher_liste(_idStand));
+        //        Task.Delay(500).Wait();
+        //    }
+        //}
+        //#endregion
+
+        //-------------------------------------------------------------------------------------
+
+
         #region Afficher le liste des articles
-        public void afficher_liste(string _idStand)
+        private void afficher_liste(string IdStand)
         {
 
             conn = new MySql.Data.MySqlClient.MySqlConnection(myConnectionString);
@@ -66,7 +83,7 @@ namespace stock_restauration
                 #region Recuperation des données
                 MySqlCommand cmd = new MySqlCommand();
 
-                cmd.CommandText = "SELECT article.id, nom, qte, sortie, stand.nom_stand FROM `article` JOIN stand ON article.id_stand = stand.id WHERE id_stand = " + _idStand;
+                cmd.CommandText = "SELECT article.id, nom, qte, sortie, stand.nom_stand FROM `article` JOIN stand ON article.id_stand = stand.id WHERE id_stand = " + IdStand;
                 cmd.Connection = conn;
                 MySqlDataReader rdrStock = cmd.ExecuteReader();
 
