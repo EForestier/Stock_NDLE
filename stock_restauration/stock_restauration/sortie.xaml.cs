@@ -25,7 +25,7 @@ namespace stock_restauration
     /// </summary>
     public partial class sortie : MetroWindow
     {
-        private tab_organisateur Fen_Sortie;
+        private Stand Fen_Sortie;
 
         int idA;
         int stock     = 0;
@@ -37,7 +37,7 @@ namespace stock_restauration
                                     + "pwd = ;"
                                     + "database = stock_resto;";
 
-        public sortie(int idarticle, tab_organisateur Fen = null)
+        public sortie(int idarticle, Stand Fen = null)
         {
             Fen_Sortie = Fen;
             idA = idarticle;

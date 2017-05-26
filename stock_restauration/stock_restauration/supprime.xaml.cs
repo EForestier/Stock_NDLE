@@ -24,7 +24,7 @@ namespace stock_restauration
     public partial class supprime : MetroWindow
     {
 
-        private tab_organisateur Fen_Ajout;
+        private Stand Fen_Ajout;
 
         int idA;
 
@@ -37,7 +37,7 @@ namespace stock_restauration
                                     + "pwd = ;"
                                     + "database = stock_resto;";
 
-        public supprime(int idarticle, tab_organisateur Fen = null)
+        public supprime(int idarticle, Stand Fen = null)
         {
             Fen_Ajout = Fen;
             idA = idarticle;

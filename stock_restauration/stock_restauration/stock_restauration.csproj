@@ -79,8 +79,8 @@
     <Compile Include="nouveau_article.xaml.cs">
       <DependentUpon>nouveau_article.xaml</DependentUpon>
     </Compile>
-    <Compile Include="organisateur.xaml.cs">
-      <DependentUpon>organisateur.xaml</DependentUpon>
+    <Compile Include="ListeStand.xaml.cs">
+      <DependentUpon>ListeStand.xaml</DependentUpon>
     </Compile>
     <Compile Include="programation.xaml.cs">
       <DependentUpon>programation.xaml</DependentUpon>
@@ -91,8 +91,8 @@
     <Compile Include="supprime.xaml.cs">
       <DependentUpon>supprime.xaml</DependentUpon>
     </Compile>
-    <Compile Include="tab_organisateur.xaml.cs">
-      <DependentUpon>tab_organisateur.xaml</DependentUpon>
+    <Compile Include="Stand.xaml.cs">
+      <DependentUpon>Stand.xaml</DependentUpon>
     </Compile>
     <Page Include="ajout.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -126,7 +126,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="organisateur.xaml">
+    <Page Include="ListeStand.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -142,7 +142,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="tab_organisateur.xaml">
+    <Page Include="Stand.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

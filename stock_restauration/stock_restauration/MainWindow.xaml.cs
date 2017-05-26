@@ -44,13 +44,13 @@ namespace stock_restauration
         private void btn_benevole_Click(object sender, RoutedEventArgs e)
         {
 
-            mdp.mot_passe wind_mdp = new mdp.mot_passe();
+            mdp.mot_passe wind_mdp = new mdp.mot_passe(false);
             wind_mdp.ShowDialog();
         }
 
         private void btn_organisateur_Click(object sender, RoutedEventArgs e)
         {
-            mdp.mot_passe wind_mdp = new mdp.mot_passe();
+            mdp.mot_passe wind_mdp = new mdp.mot_passe(true);
 
             wind_mdp.ShowDialog();        
         }
@@ -64,7 +64,7 @@ namespace stock_restauration
         private void btn_conf_Click(object sender, RoutedEventArgs e)
         {
             configuration wind_configuration = new configuration();
-            mdp.mot_passe wind_mdp = new mdp.mot_passe();
+            mdp.mot_passe wind_mdp = new mdp.mot_passe(true);
             wind_mdp.ShowDialog();
             wind_configuration.ShowDialog();
         }

@@ -27,7 +27,7 @@ namespace stock_restauration
 
         private void btn_stand_Click(object sender, RoutedEventArgs e)
         {
-           organisateur wind_organisateur = new organisateur();
+           ListeStand wind_organisateur = new ListeStand(true);
            wind_organisateur.ShowDialog();
         }
 

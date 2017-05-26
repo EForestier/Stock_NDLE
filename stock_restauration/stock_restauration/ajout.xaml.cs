@@ -24,7 +24,7 @@ namespace stock_restauration
     /// </summary>
     public partial class ajout : MetroWindow
     {
-        private tab_organisateur Fen_Ajout;
+        private Stand Fen_Ajout;
 
         int idA;
 
@@ -37,7 +37,7 @@ namespace stock_restauration
                                     + "pwd = ;"
                                     + "database = stock_resto;";
 
-        public ajout(int idarticle, tab_organisateur Fen = null)
+        public ajout(int idarticle, Stand Fen = null)
         {
 
             Fen_Ajout = Fen;

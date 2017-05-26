@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Edouard FORESTIER\Documents\GitHub\Stock_NDLE\stock_restauration\stock_restauration\obj\Debug\
+C:\Users\nicol\Documents\GitHub\Stock_NDLE\stock_restauration\stock_restauration\obj\Debug\
 stock_restauration
 none
 false
 DEBUG;TRACE
-C:\Users\Edouard FORESTIER\Documents\GitHub\Stock_NDLE\stock_restauration\stock_restauration\App.xaml
-11713486781
+C:\Users\nicol\Documents\GitHub\Stock_NDLE\stock_restauration\stock_restauration\App.xaml
+111379169272
 
-192030703204
-16743439600
-ajout.xaml;configuration.xaml;MainWindow.xaml;mdp\mot_passe.xaml;menu_organisateur.xaml;nouveau_article.xaml;organisateur.xaml;programation.xaml;sortie.xaml;supprime.xaml;tab_organisateur.xaml;
+19-1114638292
+16423229528
+ajout.xaml;configuration.xaml;MainWindow.xaml;mdp\mot_passe.xaml;menu_organisateur.xaml;nouveau_article.xaml;ListeStand.xaml;programation.xaml;sortie.xaml;supprime.xaml;Stand.xaml;
 
 False
 

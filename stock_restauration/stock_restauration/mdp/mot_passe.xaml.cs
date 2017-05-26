@@ -23,9 +23,8 @@ namespace stock_restauration.mdp
     /// </summary>
     public partial class mot_passe : MetroWindow
     {
-        string _mdp;
-        private bool verif = false;
-        int btn_bene;
+        bool estOrganisateur;
+        //int btn_bene;
         private MySql.Data.MySqlClient.MySqlConnection conn;
 
         string myConnectionString = "server = 127.0.0.1;"
@@ -35,11 +34,12 @@ namespace stock_restauration.mdp
 
 
 
-        public mot_passe()
+        public mot_passe(bool _estOrganisateur)
         {
             InitializeComponent();
 
-            lb_phrase.Content = "Veuillez entrée votre mot de passe";
+            this.estOrganisateur = _estOrganisateur;
+            lb_phrase.Content = "Veuillez scannez votre badge";
             tbox_mdp.Password = "";
            
 
@@ -59,51 +59,31 @@ namespace stock_restauration.mdp
             cmd.CommandText = "SELECT nom_stand, login_stand.login_stand FROM `stand` INNER JOIN login_stand ON stand.id_login_stand = login_stand.id ";
             cmd.Connection = conn;
             MySqlDataReader rdrMdp = cmd.ExecuteReader();
-
+            rdrMdp.Read();
             #endregion
 
-            while (rdrMdp.Read())
-            {
-                _mdp = rdrMdp[1].ToString();
-                
-            }
 
-            if (tbox_mdp.Password == _mdp)
+            if (tbox_mdp.Password == rdrMdp[1].ToString())
             {
-                verif = true;
                 this.Close();
-                menu_organisateur wind_organisateur = new menu_organisateur();
-                wind_organisateur.ShowDialog();
 
-                organisateur win_orga = new organisateur();
-                win_orga.ShowDialog();
+                if (estOrganisateur) {
+                    menu_organisateur wind_organisateur = new menu_organisateur();
+                    wind_organisateur.ShowDialog();
+                }
+                else
+                {
+                    ListeStand menu_stand = new ListeStand(false);
+                    menu_stand.ShowDialog();
+                }
+
             }
             else
             {
-
-                verif = false;
                 MessageBox.Show("mot de passe incorrect");
                 tbox_mdp.Password = "";
             }
 
-            if(btn_bene == 2)
-            {
-                if (tbox_mdp.Password == _mdp)
-                {
-                    verif = true;
-                    this.Close();
-              
-                    organisateur win_orga = new organisateur();
-                    win_orga.ShowDialog();
-                }
-                else
-                {
-
-                    verif = false;
-                    MessageBox.Show("mot de passe incorrect");
-                    tbox_mdp.Password = "";
-                }
-            }
         }
     }
 }
