@@ -23,6 +23,7 @@ namespace stock_restauration.mdp
     /// </summary>
     public partial class mot_passe : MetroWindow
     {
+        string _mdp;
         bool estOrganisateur;
         //int btn_bene;
         private MySql.Data.MySqlClient.MySqlConnection conn;
@@ -59,11 +60,17 @@ namespace stock_restauration.mdp
             cmd.CommandText = "SELECT nom_stand, login_stand.login_stand FROM `stand` INNER JOIN login_stand ON stand.id_login_stand = login_stand.id ";
             cmd.Connection = conn;
             MySqlDataReader rdrMdp = cmd.ExecuteReader();
-            rdrMdp.Read();
+           
             #endregion
 
+            while (rdrMdp.Read())
+            {
+                _mdp = rdrMdp[1].ToString();
 
-            if (tbox_mdp.Password == rdrMdp[1].ToString())
+            }
+
+
+            if (tbox_mdp.Password == _mdp)
             {
                 this.Close();
 

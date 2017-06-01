@@ -30,7 +30,7 @@
 
         <PasswordBox   x:Name="tbox_mdp" HorizontalAlignment="Left" Height="40" Margin="162,132,0,0"  VerticalAlignment="Top" Width="220" Grid.ColumnSpan="2" FontSize="20"  PasswordChar="*"/>
 
-        <PasswordBox Name="passBox" VerticalAlignment="Top" Height="42" Width="200"  Margin="14,185,230,0" Background="White" MaxLength="25" PasswordChar="*" FontSize="20"/>
+        <TextBox Name="passBox" VerticalAlignment="Top" Height="42" Width="200"  Margin="14,185,230,0" Background="White" FontSize="20"/>
 
         <Button x:Name="btn_OK" Content="VALIder" HorizontalAlignment="Left" Margin="243,195,0,0" VerticalAlignment="Top" Width="139"  BorderBrush="#FF420808" Foreground="White" FontFamily="Segoe UI Light" FontSize="15" Height="32" Grid.ColumnSpan="2" Click="btn_OK_Click">
             <Button.Background>
