@@ -185,7 +185,10 @@
     <Resource Include="footer.png" />
     <Resource Include="logoville.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="prog_sam.png" />
+    <Resource Include="prog_vend.png" />
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="samedi\BROKEN-BACK.png" />
     <Resource Include="samedi\JULIAN-PERRETTA.png" />
@@ -204,6 +207,12 @@
     <Resource Include="vendredi\EL-ROYCE.png" />
     <Resource Include="vendredi\LAST-TRAIN.png" />
     <Resource Include="vendredi\lesinsus.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="prog_vend_1_e.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="prog_vend_2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

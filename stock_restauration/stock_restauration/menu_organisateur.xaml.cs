@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using MahApps.Metro.Controls;
+using System.Windows.Threading;
 
 namespace stock_restauration
 {
@@ -23,6 +24,11 @@ namespace stock_restauration
         public menu_organisateur()
         {
             InitializeComponent();
+
+            DispatcherTimer timer = new DispatcherTimer();
+            timer.Interval = TimeSpan.FromSeconds(1);
+            timer.Tick += new EventHandler(horloge);
+            timer.Start();
         }
 
         private void btn_stand_Click(object sender, RoutedEventArgs e)
@@ -36,5 +42,12 @@ namespace stock_restauration
             nouveau_article wind_organisateur = new nouveau_article();
             wind_organisateur.ShowDialog();
         }
+
+        #region Heure
+        public void horloge(object sender, EventArgs e)
+        {
+            heure.Content = DateTime.Now.ToLongTimeString();
+        }
+        #endregion
     }
 }

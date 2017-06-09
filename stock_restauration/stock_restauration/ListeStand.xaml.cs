@@ -15,6 +15,7 @@ using MySql.Data;
 using MySql.Data.MySqlClient;
 using System.Data;
 using MahApps.Metro.Controls;
+using System.Windows.Threading;
 
 namespace stock_restauration
 {
@@ -39,6 +40,10 @@ namespace stock_restauration
             InitializeComponent();
             this.estOrganisateur = estOrganisateur;
 
+            DispatcherTimer timer = new DispatcherTimer();
+            timer.Interval = TimeSpan.FromSeconds(1);
+            timer.Tick += new EventHandler(horloge);
+            timer.Start();
 
 
         }
@@ -138,6 +143,12 @@ namespace stock_restauration
         }
         #endregion
 
-      
+        #region Heure
+        public void horloge(object sender, EventArgs e)
+        {
+            heure.Content = DateTime.Now.ToLongTimeString();
+        }
+        #endregion
+
     }
 }

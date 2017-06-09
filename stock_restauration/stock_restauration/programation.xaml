@@ -32,75 +32,40 @@
     <Grid Background="#FF1C1C29">
         <Label x:Name="Titre" Content="Programmation" HorizontalAlignment="Left" Margin="17,-8,0,0" VerticalAlignment="Top" Width="475" FontSize="45" FontFamily="Forte"  Foreground="Red"/>
 
-        <Label x:Name="vendredi" Content="Vendredi" HorizontalAlignment="Left" Margin="30,48,0,0" VerticalAlignment="Top" Width="134" FontSize="30" FontFamily="Forte"  Foreground="Red" Height="53"/>
+        
 
 
         <Label x:Name="samedi" Content="Samedi" HorizontalAlignment="Left" Margin="30,376,0,0" VerticalAlignment="Top" Width="105" FontSize="30" FontFamily="Forte"  Foreground="Red" />
 
+        <!--¨Programmation Vendredi-->
+        
+        <Label x:Name="vendredi" Content="Vendredi" HorizontalAlignment="Left" Margin="30,48,0,0" VerticalAlignment="Top" Width="134" FontSize="30" FontFamily="Forte"  Foreground="Red" Height="53"/>
+        
+        <Image x:Name="image" HorizontalAlignment="Left" Height="168" Margin="355,58,-67,0" VerticalAlignment="Top" Width="736" Source="prog_vend_1_e.png"/>
+        <Image x:Name="image1" HorizontalAlignment="Left" Height="168" Margin="248,226,0,0" VerticalAlignment="Top" Width="736" Source="prog_vend_2.png"/>
+        
+        <Rectangle Fill="#83130F" HorizontalAlignment="Left" Height="1" Margin="187,226,0,0" Stroke="#FF83130F" VerticalAlignment="Top" Width="714"/>
 
-        <GroupBox x:Name="gBox_artiste_1_V" Header="Les insus" HorizontalAlignment="Left" Margin="57,93,0,0"   VerticalAlignment="Top" Height="139" Width="210">
-            <StackPanel>
-                <Image x:Name="image1" Margin="-1" Source="vendredi/lesinsus.jpg" MouseMove="image1_MouseLeave"/>
-                <Image x:Name="image11" Margin="-1" Source="vendredi/BIGLO-OLI.png" MouseMove="image2_MouseLeave"/>
+        <Label x:Name="heure1_v" Content="17h00   17H50" HorizontalAlignment="Left" Margin="262,232,0,0"  VerticalAlignment="Top" Width="132" FontSize="15" FontFamily="Segoe UI Light"  Foreground="White" RenderTransformOrigin="0.5,0.5"/>
+        <Label x:Name="heure2_v" Content="17h55   18H55" HorizontalAlignment="Left" Margin="369,191,0,0"  VerticalAlignment="Top" Width="132" FontSize="15" FontFamily="Segoe UI Light"  Foreground="White" RenderTransformOrigin="0.5,0.5"/>
+        <Label x:Name="heure3_v" Content="19h00   20H00" HorizontalAlignment="Left" Margin="413,232,0,0"  VerticalAlignment="Top" Width="132" FontSize="15" FontFamily="Segoe UI Light"  Foreground="White" RenderTransformOrigin="0.5,0.5"/>
+        <Label x:Name="heure4_v" Content="20h05   21H25" HorizontalAlignment="Left" Margin="524,191,0,0"  VerticalAlignment="Top" Width="132" FontSize="15" FontFamily="Segoe UI Light"  Foreground="White" RenderTransformOrigin="0.5,0.5"/>
+        <Label x:Name="heure5_v" Content="21h30   22H30" HorizontalAlignment="Left" Margin="572,232,0,0"  VerticalAlignment="Top" Width="132" FontSize="15" FontFamily="Segoe UI Light"  Foreground="White" RenderTransformOrigin="0.5,0.5"/>
+        <Label x:Name="heure6_v" Content="22h35   00H05" HorizontalAlignment="Left" Margin="692,191,0,0"  VerticalAlignment="Top" Width="132" FontSize="15" FontFamily="Segoe UI Light"  Foreground="White" RenderTransformOrigin="0.5,0.5"/>
+        <Label x:Name="heure7_v" Content="00h10   01H10" HorizontalAlignment="Left" Margin="728,232,0,0"  VerticalAlignment="Top" Width="132" FontSize="15" FontFamily="Segoe UI Light"  Foreground="White" RenderTransformOrigin="0.5,0.5"/>
+        <Label x:Name="heure8_v" Content="01h15   02H30" HorizontalAlignment="Left" Margin="853,191,0,0"  VerticalAlignment="Top" Width="132" FontSize="15" FontFamily="Segoe UI Light"  Foreground="White" RenderTransformOrigin="0.5,0.5"/>
+        
+        <Label x:Name="Scence1_v" Content="Scène 1" HorizontalAlignment="Left" Margin="90,133,0,0" VerticalAlignment="Top" Width="134" FontSize="30" FontFamily="Forte"  Foreground="Red" Height="53"/>
+        <Label x:Name="Scence2_v" Content="Scène 2" HorizontalAlignment="Left" Margin="90,255,0,0" VerticalAlignment="Top" Width="134" FontSize="30" FontFamily="Forte"  Foreground="Red" Height="53"/>
 
-            </StackPanel>
-        </GroupBox>
-        <GroupBox x:Name="gBox_artiste_2_V" Header="Bigflo oli" HorizontalAlignment="Left" Margin="282,93,0,0"  VerticalAlignment="Top" Height="139" Width="210">
-            <StackPanel>
-                 <Image x:Name="image2" Margin="-1" Source="vendredi/BIGLO-OLI.png" MouseMove="image2_MouseLeave"/>
-                <Image x:Name="image22" Margin="-1" Source="vendredi/lesinsus.jpg" MouseMove="image2_MouseLeave"/>
-               
-            </StackPanel>
-        </GroupBox>
-        <GroupBox x:Name="gBox_artiste_3_V" Header="coulours in the streer" HorizontalAlignment="Left" Margin="510,93,0,0"  VerticalAlignment="Top" Height="139" Width="210">
-            <Image x:Name="image3" Margin="-1" Source="vendredi/COLOURS-IN-THE-STREET.png"/>
-        </GroupBox>
-        <GroupBox x:Name="gBox_artiste_4_V" Header="datcha mandala" HorizontalAlignment="Left" Margin="741,93,0,0"  VerticalAlignment="Top" Height="139" Width="210">
-            <Image x:Name="image4" Margin="-1" Source="vendredi/DATCHA-MANDALA.png"/>
-        </GroupBox>
-        <GroupBox x:Name="gBox_artiste_5_V" Header="Alltta" HorizontalAlignment="Left" Margin="57,240,0,0" VerticalAlignment="Top" Height="139" Width="210">
-            <Image x:Name="image5" Margin="-1" Source="vendredi/ALLTTA.png"/>
-        </GroupBox>
-        <GroupBox x:Name="gBox_artiste_6_V" Header="last train" HorizontalAlignment="Left" Margin="282,240,0,0" VerticalAlignment="Top" Height="139" Width="210">
-            <Image x:Name="image6" Margin="-1" Source="vendredi/LAST-TRAIN.png"/>
-        </GroupBox>
-        <GroupBox x:Name="gBox_artiste_7_V" Header="el royce" HorizontalAlignment="Left" Margin="510,240,0,0" VerticalAlignment="Top" Height="139" Width="210">
-            <Image x:Name="image7" Margin="-1" Source="vendredi/EL-ROYCE.png"/>
-        </GroupBox>
-        <GroupBox x:Name="gBox_artiste_8_V" Header="creeping devil cactus" HorizontalAlignment="Left" Margin="741,240,0,0" VerticalAlignment="Top" Height="139" Width="210">
-            <Image x:Name="image8" Margin="-1" Source="vendredi/CREEPING-DEVIL-CACTUS.png"/>
-        </GroupBox>
-
-
-        <GroupBox x:Name="gBox_artiste_1_S" Header="julian perretta" HorizontalAlignment="Left" Margin="57,422,0,0"  VerticalAlignment="Top" Height="139" Width="210">
-            <Image x:Name="image1_S" Margin="-1" Source="samedi/JULIAN-PERRETTA.png"/>
-        </GroupBox>
-        <GroupBox x:Name="gBox_artiste_2_S" Header="broken back" HorizontalAlignment="Left" Margin="282,422,0,0" VerticalAlignment="Top" Height="139" Width="210">
-            <Image x:Name="image2_S" Margin="-1" Source="samedi/BROKEN-BACK.png"/>
-        </GroupBox>
-        <GroupBox x:Name="gBox_artiste_3_S" Header="the prodigy" HorizontalAlignment="Left" Margin="510,422,0,0" VerticalAlignment="Top" Height="139" Width="210">
-            <Image x:Name="image3_S" Margin="-1" Source="samedi/THE-PRODIGY.png"/>
-        </GroupBox>
-        <GroupBox x:Name="gBox_artiste_4_S" Header="rodrigo y gabriela" HorizontalAlignment="Left" Margin="741,422,0,0" VerticalAlignment="Top" Height="139" Width="210">
-            <Image x:Name="image4_S" Margin="-1" Source="samedi/RODRIGO-Y-GABRIELA.png"/>
-        </GroupBox>
-        <GroupBox x:Name="gBox_artiste_5_S" Header="two door cinema club" HorizontalAlignment="Left" Margin="396,572,0,0" VerticalAlignment="Top" Height="139" Width="210">
-            <Image x:Name="image5_S" Margin="-1" Source="samedi/TWO-DOOR-CINEMA-CLUB.png"/>
-        </GroupBox>
-        <GroupBox x:Name="gBox_artiste_6_S" Header="little big" HorizontalAlignment="Left" Margin="169,572,0,0" VerticalAlignment="Top" Height="139" Width="210">
-            <Image x:Name="image6_S" Margin="-1" Source="samedi/LITTLE-BIG.png"/>
-        </GroupBox>
-        <GroupBox x:Name="gBox_artiste_7_S" Header="ofenbach" HorizontalAlignment="Left" Margin="627,572,0,0" VerticalAlignment="Top" Height="139" Width="210">
-            <Image x:Name="image7_S" Margin="-1" Source="samedi/OFENBACH.png"/>
-        </GroupBox>
-
-
-
-
-
-
-
-
+        <Label x:Name="artiste1_v" Content="CREEPING DEVILE CACTUS" HorizontalAlignment="Left" Margin="236,363,0,0"  VerticalAlignment="Top" Width="158" FontSize="13" FontFamily="Segoe UI Light"  Foreground="White" RenderTransformOrigin="0.5,0.5"/>
+        <Label x:Name="artiste2_v" Content="LAST TRAIN" HorizontalAlignment="Left" Margin="377,60,0,0"  VerticalAlignment="Top" Width="90" FontSize="13" FontFamily="Segoe UI Light"  Foreground="White" RenderTransformOrigin="0.5,0.5"/>
+        <Label x:Name="artiste3_v" Content="EL ROYCE" HorizontalAlignment="Left" Margin="436,363,0,0"  VerticalAlignment="Top" Width="81" FontSize="13" FontFamily="Segoe UI Light"  Foreground="White" RenderTransformOrigin="0.5,0.5"/>
+        <Label x:Name="artiste4_v" Content="BIGFLO OLI" HorizontalAlignment="Left" Margin="536,60,0,0"  VerticalAlignment="Top" Width="90" FontSize="13" FontFamily="Segoe UI Light"  Foreground="White" RenderTransformOrigin="0.5,0.5"/>
+        <Label x:Name="artiste5_v" Content="COLOURS IN THE STREET" HorizontalAlignment="Left" Margin="547,363,0,0"  VerticalAlignment="Top" Width="151" FontSize="13" FontFamily="Segoe UI Light"  Foreground="White" RenderTransformOrigin="0.5,0.5"/>
+        <Label x:Name="artiste6_v" Content="LES INSUS" HorizontalAlignment="Left" Margin="712,60,0,0"  VerticalAlignment="Top" Width="90" FontSize="13" FontFamily="Segoe UI Light"  Foreground="White" RenderTransformOrigin="0.5,0.5"/>
+        <Label x:Name="artiste7_v" Content="DÄTCHA MANDALA" HorizontalAlignment="Left" Margin="721,363,0,0"  VerticalAlignment="Top" Width="151" FontSize="13" FontFamily="Segoe UI Light"  Foreground="White" RenderTransformOrigin="0.5,0.5"/>
+        <Label x:Name="artiste8_v" Content="ALLTTA" HorizontalAlignment="Left" Margin="876,60,0,0"  VerticalAlignment="Top" Width="90" FontSize="13" FontFamily="Segoe UI Light"  Foreground="White" RenderTransformOrigin="0.5,0.5"/>
 
 
 

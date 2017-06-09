@@ -25,7 +25,7 @@ namespace stock_restauration
     public partial class Stand : MetroWindow
     {
         public delegate void D_liste();
-        private bool estOrganisateur;
+        private bool _estOrganisateur;
         private MySql.Data.MySqlClient.MySqlConnection conn;
        
         string myConnectionString = "server = 127.0.0.1;"
@@ -37,7 +37,7 @@ namespace stock_restauration
         public Stand(bool estOrganisateur,string _idStand)
         {
             InitializeComponent();
-            this.estOrganisateur = estOrganisateur;
+            this._estOrganisateur = estOrganisateur;
 
             #region Titre tableau
             List<TITRE> items = new List<TITRE>();
@@ -134,12 +134,12 @@ namespace stock_restauration
                     btn_ajout.Content = "Ajouer";
                     btn_ajout.Tag = rdrStock[0].ToString();
                     btn_ajout.Click += btn_ajouter_Click;
-                    if (!this.estOrganisateur) { btn_ajout.IsEnabled = false; }
+                    if (!this._estOrganisateur) { btn_ajout.IsEnabled = false; }
                     
                     btn_sup.Content     = "Supprimer" ;
                     btn_sup.Tag         = rdrStock[0].ToString();
                     btn_sup.Click      += btn_supp_Click;
-                    if (!this.estOrganisateur) { btn_sup.IsEnabled = false; }
+                    if (!this._estOrganisateur) { btn_sup.IsEnabled = false; }
 
                     btn_sortie.Content = "Sortie";
                     btn_sortie.Tag     = rdrStock[0].ToString();

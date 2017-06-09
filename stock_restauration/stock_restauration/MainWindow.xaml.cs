@@ -23,8 +23,7 @@ namespace stock_restauration
     /// </summary>
     public partial class MainWindow :MetroWindow
     {
-        private int btn_orga;
-        private int btn_bene;
+        
 
         public MainWindow()
         {
@@ -35,8 +34,7 @@ namespace stock_restauration
             timer.Tick += new EventHandler(horloge);
             timer.Start();
 
-            btn_bene = 2;
-            btn_orga = 1;
+           
 
 
         }
@@ -51,7 +49,6 @@ namespace stock_restauration
         private void btn_organisateur_Click(object sender, RoutedEventArgs e)
         {
             mdp.mot_passe wind_mdp = new mdp.mot_passe(true);
-
             wind_mdp.ShowDialog();        
         }
 
@@ -63,10 +60,10 @@ namespace stock_restauration
 
         private void btn_conf_Click(object sender, RoutedEventArgs e)
         {
-            configuration wind_configuration = new configuration();
+           
             mdp.mot_passe wind_mdp = new mdp.mot_passe(true);
             wind_mdp.ShowDialog();
-            wind_configuration.ShowDialog();
+           
         }
 
         public void horloge (object sender, EventArgs e)

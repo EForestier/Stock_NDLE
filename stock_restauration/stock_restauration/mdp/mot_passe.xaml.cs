@@ -41,7 +41,9 @@ namespace stock_restauration.mdp
 
             this.estOrganisateur = _estOrganisateur;
             lb_phrase.Content = "Veuillez scannez votre badge";
+            tbox_mdp.Focus();
             tbox_mdp.Password = "";
+
            
 
             
@@ -60,38 +62,51 @@ namespace stock_restauration.mdp
             cmd.CommandText = "SELECT nom_stand, login_stand.login_stand FROM `stand` INNER JOIN login_stand ON stand.id_login_stand = login_stand.id ";
             cmd.Connection = conn;
             MySqlDataReader rdrMdp = cmd.ExecuteReader();
-           
+
             #endregion
-
-            while (rdrMdp.Read())
+            
+            do
             {
+                rdrMdp.Read();
                 _mdp = rdrMdp[1].ToString();
-
+                
             }
+            while (tbox_mdp.Password != _mdp) ;
 
 
-            if (tbox_mdp.Password == _mdp)
-            {
+            //    if (tbox_mdp.Password == _mdp)
+            //{
                 this.Close();
 
-                if (estOrganisateur) {
+                if (estOrganisateur == true && tbox_mdp.Password == "organisateur") {
                     menu_organisateur wind_organisateur = new menu_organisateur();
+                    _mdp = "";
                     wind_organisateur.ShowDialog();
                 }
-                else
+               else if (estOrganisateur == false && tbox_mdp.Password == "benevole")
                 {
                     ListeStand menu_stand = new ListeStand(false);
+                    _mdp = "";
                     menu_stand.ShowDialog();
                 }
-
-            }
-            else
-            {
-                MessageBox.Show("mot de passe incorrect");
-                tbox_mdp.Password = "";
-            }
-
+                //else
+                //{
+                //    configuration wind_configuration = new configuration();
+                //    _mdp = "";
+                //    wind_configuration.ShowDialog();
+                //}
+            //}
+                else
+                {
+                    MessageBox.Show("mot de passe incorrect");
+                    tbox_mdp.Password = "";
+                }
+          
         }
+
+       
+
+       
     }
 }
 

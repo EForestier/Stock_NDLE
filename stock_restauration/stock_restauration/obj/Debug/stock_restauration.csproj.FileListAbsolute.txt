@@ -28,42 +28,6 @@ C:\Users\edouard.forestier\Documents\GitHub\Stock_NDLE\stock_restauration\stock_
 C:\Users\edouard.forestier\Documents\GitHub\Stock_NDLE\stock_restauration\stock_restauration\obj\Debug\App.g.cs
 C:\Users\edouard.forestier\Documents\GitHub\Stock_NDLE\stock_restauration\stock_restauration\obj\Debug\stock_restauration_MarkupCompile.cache
 C:\Users\edouard.forestier\Documents\GitHub\Stock_NDLE\stock_restauration\stock_restauration\obj\Debug\stock_restauration_MarkupCompile.lref
-C:\Users\Edouard FORESTIER\Documents\GitHub\Stock_NDLE\stock_restauration\stock_restauration\bin\Debug\stock_restauration.exe.config
-C:\Users\Edouard FORESTIER\Documents\GitHub\Stock_NDLE\stock_restauration\stock_restauration\bin\Debug\stock_restauration.exe
-C:\Users\Edouard FORESTIER\Documents\GitHub\Stock_NDLE\stock_restauration\stock_restauration\bin\Debug\stock_restauration.pdb
-C:\Users\Edouard FORESTIER\Documents\GitHub\Stock_NDLE\stock_restauration\stock_restauration\bin\Debug\MahApps.Metro.dll
-C:\Users\Edouard FORESTIER\Documents\GitHub\Stock_NDLE\stock_restauration\stock_restauration\bin\Debug\MySql.Data.dll
-C:\Users\Edouard FORESTIER\Documents\GitHub\Stock_NDLE\stock_restauration\stock_restauration\bin\Debug\System.Windows.Interactivity.dll
-C:\Users\Edouard FORESTIER\Documents\GitHub\Stock_NDLE\stock_restauration\stock_restauration\bin\Debug\MahApps.Metro.pdb
-C:\Users\Edouard FORESTIER\Documents\GitHub\Stock_NDLE\stock_restauration\stock_restauration\bin\Debug\MahApps.Metro.xml
-C:\Users\Edouard FORESTIER\Documents\GitHub\Stock_NDLE\stock_restauration\stock_restauration\bin\Debug\MySql.Data.xml
-C:\Users\Edouard FORESTIER\Documents\GitHub\Stock_NDLE\stock_restauration\stock_restauration\obj\Debug\ajout.g.cs
-C:\Users\Edouard FORESTIER\Documents\GitHub\Stock_NDLE\stock_restauration\stock_restauration\obj\Debug\configuration.g.cs
-C:\Users\Edouard FORESTIER\Documents\GitHub\Stock_NDLE\stock_restauration\stock_restauration\obj\Debug\MainWindow.g.cs
-C:\Users\Edouard FORESTIER\Documents\GitHub\Stock_NDLE\stock_restauration\stock_restauration\obj\Debug\mdp\mot_passe.g.cs
-C:\Users\Edouard FORESTIER\Documents\GitHub\Stock_NDLE\stock_restauration\stock_restauration\obj\Debug\menu_organisateur.g.cs
-C:\Users\Edouard FORESTIER\Documents\GitHub\Stock_NDLE\stock_restauration\stock_restauration\obj\Debug\nouveau_article.g.cs
-C:\Users\Edouard FORESTIER\Documents\GitHub\Stock_NDLE\stock_restauration\stock_restauration\obj\Debug\programation.g.cs
-C:\Users\Edouard FORESTIER\Documents\GitHub\Stock_NDLE\stock_restauration\stock_restauration\obj\Debug\sortie.g.cs
-C:\Users\Edouard FORESTIER\Documents\GitHub\Stock_NDLE\stock_restauration\stock_restauration\obj\Debug\supprime.g.cs
-C:\Users\Edouard FORESTIER\Documents\GitHub\Stock_NDLE\stock_restauration\stock_restauration\obj\Debug\App.g.cs
-C:\Users\Edouard FORESTIER\Documents\GitHub\Stock_NDLE\stock_restauration\stock_restauration\obj\Debug\stock_restauration_MarkupCompile.cache
-C:\Users\Edouard FORESTIER\Documents\GitHub\Stock_NDLE\stock_restauration\stock_restauration\obj\Debug\stock_restauration_MarkupCompile.lref
-C:\Users\Edouard FORESTIER\Documents\GitHub\Stock_NDLE\stock_restauration\stock_restauration\obj\Debug\ajout.baml
-C:\Users\Edouard FORESTIER\Documents\GitHub\Stock_NDLE\stock_restauration\stock_restauration\obj\Debug\configuration.baml
-C:\Users\Edouard FORESTIER\Documents\GitHub\Stock_NDLE\stock_restauration\stock_restauration\obj\Debug\MainWindow.baml
-C:\Users\Edouard FORESTIER\Documents\GitHub\Stock_NDLE\stock_restauration\stock_restauration\obj\Debug\mdp\mot_passe.baml
-C:\Users\Edouard FORESTIER\Documents\GitHub\Stock_NDLE\stock_restauration\stock_restauration\obj\Debug\menu_organisateur.baml
-C:\Users\Edouard FORESTIER\Documents\GitHub\Stock_NDLE\stock_restauration\stock_restauration\obj\Debug\nouveau_article.baml
-C:\Users\Edouard FORESTIER\Documents\GitHub\Stock_NDLE\stock_restauration\stock_restauration\obj\Debug\programation.baml
-C:\Users\Edouard FORESTIER\Documents\GitHub\Stock_NDLE\stock_restauration\stock_restauration\obj\Debug\sortie.baml
-C:\Users\Edouard FORESTIER\Documents\GitHub\Stock_NDLE\stock_restauration\stock_restauration\obj\Debug\supprime.baml
-C:\Users\Edouard FORESTIER\Documents\GitHub\Stock_NDLE\stock_restauration\stock_restauration\obj\Debug\stock_restauration.g.resources
-C:\Users\Edouard FORESTIER\Documents\GitHub\Stock_NDLE\stock_restauration\stock_restauration\obj\Debug\stock_restauration.Properties.Resources.resources
-C:\Users\Edouard FORESTIER\Documents\GitHub\Stock_NDLE\stock_restauration\stock_restauration\obj\Debug\stock_restauration.csproj.GenerateResource.Cache
-C:\Users\Edouard FORESTIER\Documents\GitHub\Stock_NDLE\stock_restauration\stock_restauration\obj\Debug\stock_restauration.exe
-C:\Users\Edouard FORESTIER\Documents\GitHub\Stock_NDLE\stock_restauration\stock_restauration\obj\Debug\stock_restauration.pdb
-C:\Users\Edouard FORESTIER\Documents\GitHub\Stock_NDLE\stock_restauration\stock_restauration\obj\Debug\stock_restauration.csprojResolveAssemblyReference.cache
 C:\Users\nicol\Documents\GitHub\Stock_NDLE\stock_restauration\stock_restauration\bin\Debug\stock_restauration.exe.config
 C:\Users\nicol\Documents\GitHub\Stock_NDLE\stock_restauration\stock_restauration\obj\Debug\stock_restauration.exe
 C:\Users\nicol\Documents\GitHub\Stock_NDLE\stock_restauration\stock_restauration\obj\Debug\stock_restauration.pdb
@@ -103,7 +67,43 @@ C:\Users\nicol\Documents\GitHub\Stock_NDLE\stock_restauration\stock_restauration
 C:\Users\nicol\Documents\GitHub\Stock_NDLE\stock_restauration\stock_restauration\obj\Debug\stock_restauration.g.resources
 C:\Users\nicol\Documents\GitHub\Stock_NDLE\stock_restauration\stock_restauration\obj\Debug\stock_restauration.Properties.Resources.resources
 C:\Users\nicol\Documents\GitHub\Stock_NDLE\stock_restauration\stock_restauration\obj\Debug\stock_restauration.csproj.GenerateResource.Cache
+C:\Users\Edouard FORESTIER\Documents\GitHub\Stock_NDLE\stock_restauration\stock_restauration\bin\Debug\stock_restauration.exe.config
+C:\Users\Edouard FORESTIER\Documents\GitHub\Stock_NDLE\stock_restauration\stock_restauration\bin\Debug\stock_restauration.exe
+C:\Users\Edouard FORESTIER\Documents\GitHub\Stock_NDLE\stock_restauration\stock_restauration\bin\Debug\stock_restauration.pdb
+C:\Users\Edouard FORESTIER\Documents\GitHub\Stock_NDLE\stock_restauration\stock_restauration\bin\Debug\MahApps.Metro.dll
+C:\Users\Edouard FORESTIER\Documents\GitHub\Stock_NDLE\stock_restauration\stock_restauration\bin\Debug\MySql.Data.dll
+C:\Users\Edouard FORESTIER\Documents\GitHub\Stock_NDLE\stock_restauration\stock_restauration\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\Edouard FORESTIER\Documents\GitHub\Stock_NDLE\stock_restauration\stock_restauration\bin\Debug\MahApps.Metro.pdb
+C:\Users\Edouard FORESTIER\Documents\GitHub\Stock_NDLE\stock_restauration\stock_restauration\bin\Debug\MahApps.Metro.xml
+C:\Users\Edouard FORESTIER\Documents\GitHub\Stock_NDLE\stock_restauration\stock_restauration\bin\Debug\MySql.Data.xml
+C:\Users\Edouard FORESTIER\Documents\GitHub\Stock_NDLE\stock_restauration\stock_restauration\obj\Debug\ajout.g.cs
+C:\Users\Edouard FORESTIER\Documents\GitHub\Stock_NDLE\stock_restauration\stock_restauration\obj\Debug\configuration.g.cs
+C:\Users\Edouard FORESTIER\Documents\GitHub\Stock_NDLE\stock_restauration\stock_restauration\obj\Debug\MainWindow.g.cs
+C:\Users\Edouard FORESTIER\Documents\GitHub\Stock_NDLE\stock_restauration\stock_restauration\obj\Debug\mdp\mot_passe.g.cs
+C:\Users\Edouard FORESTIER\Documents\GitHub\Stock_NDLE\stock_restauration\stock_restauration\obj\Debug\menu_organisateur.g.cs
+C:\Users\Edouard FORESTIER\Documents\GitHub\Stock_NDLE\stock_restauration\stock_restauration\obj\Debug\nouveau_article.g.cs
 C:\Users\Edouard FORESTIER\Documents\GitHub\Stock_NDLE\stock_restauration\stock_restauration\obj\Debug\ListeStand.g.cs
+C:\Users\Edouard FORESTIER\Documents\GitHub\Stock_NDLE\stock_restauration\stock_restauration\obj\Debug\programation.g.cs
+C:\Users\Edouard FORESTIER\Documents\GitHub\Stock_NDLE\stock_restauration\stock_restauration\obj\Debug\sortie.g.cs
+C:\Users\Edouard FORESTIER\Documents\GitHub\Stock_NDLE\stock_restauration\stock_restauration\obj\Debug\supprime.g.cs
 C:\Users\Edouard FORESTIER\Documents\GitHub\Stock_NDLE\stock_restauration\stock_restauration\obj\Debug\Stand.g.cs
+C:\Users\Edouard FORESTIER\Documents\GitHub\Stock_NDLE\stock_restauration\stock_restauration\obj\Debug\App.g.cs
+C:\Users\Edouard FORESTIER\Documents\GitHub\Stock_NDLE\stock_restauration\stock_restauration\obj\Debug\stock_restauration_MarkupCompile.cache
+C:\Users\Edouard FORESTIER\Documents\GitHub\Stock_NDLE\stock_restauration\stock_restauration\obj\Debug\stock_restauration_MarkupCompile.lref
+C:\Users\Edouard FORESTIER\Documents\GitHub\Stock_NDLE\stock_restauration\stock_restauration\obj\Debug\ajout.baml
+C:\Users\Edouard FORESTIER\Documents\GitHub\Stock_NDLE\stock_restauration\stock_restauration\obj\Debug\configuration.baml
+C:\Users\Edouard FORESTIER\Documents\GitHub\Stock_NDLE\stock_restauration\stock_restauration\obj\Debug\MainWindow.baml
+C:\Users\Edouard FORESTIER\Documents\GitHub\Stock_NDLE\stock_restauration\stock_restauration\obj\Debug\mdp\mot_passe.baml
+C:\Users\Edouard FORESTIER\Documents\GitHub\Stock_NDLE\stock_restauration\stock_restauration\obj\Debug\menu_organisateur.baml
+C:\Users\Edouard FORESTIER\Documents\GitHub\Stock_NDLE\stock_restauration\stock_restauration\obj\Debug\nouveau_article.baml
 C:\Users\Edouard FORESTIER\Documents\GitHub\Stock_NDLE\stock_restauration\stock_restauration\obj\Debug\ListeStand.baml
+C:\Users\Edouard FORESTIER\Documents\GitHub\Stock_NDLE\stock_restauration\stock_restauration\obj\Debug\programation.baml
+C:\Users\Edouard FORESTIER\Documents\GitHub\Stock_NDLE\stock_restauration\stock_restauration\obj\Debug\sortie.baml
+C:\Users\Edouard FORESTIER\Documents\GitHub\Stock_NDLE\stock_restauration\stock_restauration\obj\Debug\supprime.baml
 C:\Users\Edouard FORESTIER\Documents\GitHub\Stock_NDLE\stock_restauration\stock_restauration\obj\Debug\Stand.baml
+C:\Users\Edouard FORESTIER\Documents\GitHub\Stock_NDLE\stock_restauration\stock_restauration\obj\Debug\stock_restauration.g.resources
+C:\Users\Edouard FORESTIER\Documents\GitHub\Stock_NDLE\stock_restauration\stock_restauration\obj\Debug\stock_restauration.Properties.Resources.resources
+C:\Users\Edouard FORESTIER\Documents\GitHub\Stock_NDLE\stock_restauration\stock_restauration\obj\Debug\stock_restauration.csproj.GenerateResource.Cache
+C:\Users\Edouard FORESTIER\Documents\GitHub\Stock_NDLE\stock_restauration\stock_restauration\obj\Debug\stock_restauration.exe
+C:\Users\Edouard FORESTIER\Documents\GitHub\Stock_NDLE\stock_restauration\stock_restauration\obj\Debug\stock_restauration.pdb
+C:\Users\Edouard FORESTIER\Documents\GitHub\Stock_NDLE\stock_restauration\stock_restauration\obj\Debug\stock_restauration.csprojResolveAssemblyReference.cache
