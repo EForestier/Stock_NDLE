@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using MahApps.Metro.Controls;
+using System.Windows.Threading;
+
 
 namespace stock_restauration
 {
@@ -25,19 +27,17 @@ namespace stock_restauration
         public programation()
         {
             InitializeComponent();
+
+            DispatcherTimer timer = new DispatcherTimer();
+            timer.Interval = TimeSpan.FromSeconds(1);
+            timer.Tick += new EventHandler(horloge);
+            timer.Start();
+
         }
 
-       
-        //private void image1_MouseLeave(object sender, MouseEventArgs e)
-        //{
-        //    //gBox_artiste_1_V.Content =image11;
-        //    gBox_artiste_1_V.Content = image11;
-
-        //}
-        //private void image2_MouseLeave(object sender, MouseEventArgs e)
-        //{
-        //    gBox_artiste_2_V.Content = image22;
-
-        //}
+        public void horloge(object sender, EventArgs e)
+        {
+            heure.Content = DateTime.Now.ToLongTimeString();
+        }
     }
 }

@@ -89,7 +89,7 @@ namespace stock_restauration.mdp
                     _mdp = "";
                     menu_stand.ShowDialog();
                 }
-                //else
+                //else 
                 //{
                 //    configuration wind_configuration = new configuration();
                 //    _mdp = "";
