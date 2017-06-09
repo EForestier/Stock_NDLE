@@ -49,7 +49,7 @@ namespace stock_restauration
             //Thread liste = new Thread(Refresh(_idStand));
             //liste.Start();
 
-            //afficher_liste(_idStand);
+            afficher_liste(_idStand);
 
 
         }
