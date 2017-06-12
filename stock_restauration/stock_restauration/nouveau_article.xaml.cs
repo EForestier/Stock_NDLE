@@ -28,7 +28,7 @@ namespace stock_restauration
        
 
         private MySql.Data.MySqlClient.MySqlConnection conn;
-
+        int sortie = 0;
 
         string myConnectionString = "server = 127.0.0.1;"
                                     + "uid = root;"
@@ -56,13 +56,14 @@ namespace stock_restauration
 
             conn.Open();
             
-            MySqlCommand cmd = new MySqlCommand("INSERT INTO article(id, nom, qte, sortie, id_stand) VALUES(NULL,@nom,@qte,NULL,@id_stand)", conn);
+            MySqlCommand cmd = new MySqlCommand("INSERT INTO article(id, nom, qte, sortie, id_stand) VALUES(NULL,@nom,@qte,@sortie,@id_stand)", conn);
             cmd.Parameters.Clear();
             cmd.Parameters.AddWithValue("@nom", tBox_article.Text);
             cmd.Parameters.AddWithValue("@qte", tBox_quantite.Text);
+            cmd.Parameters.AddWithValue("@sortie", sortie);
 
             #region Parametre filtre requete " ERDRE "
-            
+
             //Barbeuck = 1
             if ((cb_barbeuck.IsChecked == true) && (cb_erdre.IsChecked == true))
             {

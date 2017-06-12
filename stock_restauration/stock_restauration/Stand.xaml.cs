@@ -39,6 +39,8 @@ namespace stock_restauration
             InitializeComponent();
             this._estOrganisateur = estOrganisateur;
 
+            afficher_liste(_idStand);
+
             #region Titre tableau
             List<TITRE> items = new List<TITRE>();
             items.Add(new TITRE() { rien1 = "" ,article = "Article",  rien = "", stock = "Stock", sortie = "Sortie" });
@@ -46,10 +48,10 @@ namespace stock_restauration
             lbox_titre.ItemsSource = items;
             #endregion
 
-            //Thread liste = new Thread(Refresh(_idStand));
+            //Thread liste = new Thread(Refresh(afficher_liste()));
             //liste.Start();
 
-            afficher_liste(_idStand);
+
 
 
         }
@@ -57,8 +59,8 @@ namespace stock_restauration
         //-------------------------------------------------------------------------------------
         //-------------------------------------------------------------------------------------
 
-        //#region Methode Refresh
-        //private void Refresh(string _idStand)
+        #region Methode Refresh
+        //private void Refresh(string IdStand)
         //{
         //    while (true)
         //    {
@@ -66,7 +68,7 @@ namespace stock_restauration
         //        Task.Delay(500).Wait();
         //    }
         //}
-        //#endregion
+        #endregion
 
         //-------------------------------------------------------------------------------------
 
