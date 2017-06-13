@@ -135,7 +135,7 @@ namespace stock_restauration
 
                     btn_ajout.Content = "Ajouer";
                     btn_ajout.Tag = rdrStock[0].ToString();
-                    btn_ajout.Click += btn_ajouter_Click;
+                    btn_ajout.Click += btn_ajouter_Click(IdStand);
                     if (!this._estOrganisateur) { btn_ajout.IsEnabled = false; }
                     
                     btn_sup.Content     = "Supprimer" ;
@@ -191,7 +191,7 @@ namespace stock_restauration
 
         //-------------------------------------------------------------------------------------
         #region Bouton "Ajouté"
-        private void btn_ajouter_Click(object sender, RoutedEventArgs e)
+        private void btn_ajouter_Click(object sender, RoutedEventArgs e, string IdStand)
         {
             
             Button btn = (Button)sender;
@@ -201,6 +201,7 @@ namespace stock_restauration
             {
                 ajout action_ajout = new ajout(idarticle, this);
                 action_ajout.ShowDialog();
+                afficher_liste(IdStand);
             }
 
             catch { this.Close(); }
