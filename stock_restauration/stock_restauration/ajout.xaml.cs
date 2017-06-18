@@ -97,6 +97,7 @@ namespace stock_restauration
                 MessageBox.Show("Stock Ajouté.");
                 conn.Close();
                 
+
                 //if (Fen_Ajout != null) Fen_Ajout.afficher_liste();
                 this.Close();
             }

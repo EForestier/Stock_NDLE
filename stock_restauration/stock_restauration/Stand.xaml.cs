@@ -16,6 +16,7 @@ using MySql.Data.MySqlClient;
 using System.Data;
 using MahApps.Metro.Controls;
 using System.Threading;
+using System.Windows.Threading;
 
 namespace stock_restauration
 {
@@ -26,6 +27,7 @@ namespace stock_restauration
     {
         public delegate void D_liste();
         private bool _estOrganisateur;
+        private bool _etat;
         private MySql.Data.MySqlClient.MySqlConnection conn;
        
         string myConnectionString = "server = 127.0.0.1;"
@@ -40,6 +42,12 @@ namespace stock_restauration
             this._estOrganisateur = estOrganisateur;
 
             afficher_liste(_idStand);
+
+            //DispatcherTimer MAJ_Tableau = new DispatcherTimer();
+            //MAJ_Tableau.Tick += new EventHandler(afficher_liste(_idStand));
+            //MAJ_Tableau.Interval = TimeSpan.FromSeconds(10);
+            
+            //MAJ_Tableau.Start();
 
             #region Titre tableau
             List<TITRE> items = new List<TITRE>();
@@ -56,6 +64,7 @@ namespace stock_restauration
 
         }
 
+      
         //-------------------------------------------------------------------------------------
         //-------------------------------------------------------------------------------------
 
@@ -74,7 +83,7 @@ namespace stock_restauration
 
 
         #region Afficher le liste des articles
-        private void afficher_liste(string IdStand)
+        private void afficher_liste(string IdStand/*, object sender, EventArgs e*/)
         {
 
             conn = new MySql.Data.MySqlClient.MySqlConnection(myConnectionString);
@@ -135,7 +144,7 @@ namespace stock_restauration
 
                     btn_ajout.Content = "Ajouer";
                     btn_ajout.Tag = rdrStock[0].ToString();
-                    btn_ajout.Click += btn_ajouter_Click(IdStand);
+                    btn_ajout.Click += btn_ajouter_Click;
                     if (!this._estOrganisateur) { btn_ajout.IsEnabled = false; }
                     
                     btn_sup.Content     = "Supprimer" ;
@@ -191,7 +200,7 @@ namespace stock_restauration
 
         //-------------------------------------------------------------------------------------
         #region Bouton "Ajouté"
-        private void btn_ajouter_Click(object sender, RoutedEventArgs e, string IdStand)
+        private void btn_ajouter_Click(object sender, RoutedEventArgs e)
         {
             
             Button btn = (Button)sender;
@@ -201,7 +210,7 @@ namespace stock_restauration
             {
                 ajout action_ajout = new ajout(idarticle, this);
                 action_ajout.ShowDialog();
-                afficher_liste(IdStand);
+                
             }
 
             catch { this.Close(); }
