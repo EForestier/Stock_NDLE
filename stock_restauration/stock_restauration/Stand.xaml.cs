@@ -34,14 +34,15 @@ namespace stock_restauration
                                     + "uid = root;"
                                     + "pwd = ;"
                                     + "database = stock_resto;";
+        string idStand;
 
         
         public Stand(bool estOrganisateur,string _idStand)
         {
             InitializeComponent();
             this._estOrganisateur = estOrganisateur;
-
-            afficher_liste(_idStand);
+            this.idStand = _idStand;
+            afficher_liste(idStand);
 
             //DispatcherTimer MAJ_Tableau = new DispatcherTimer();
             //MAJ_Tableau.Tick += new EventHandler(afficher_liste(_idStand));
@@ -104,13 +105,14 @@ namespace stock_restauration
                
                 #region Tableau avec données de BDD
 
-                //lbox_article.Items.Clear();
+                lbox_article.Items.Clear();
 
                 while (rdrStock.Read())
                 {
                     
 
                     StackPanel spStock = new StackPanel();
+                    
 
                     spStock.Orientation = Orientation.Horizontal;
 
@@ -210,10 +212,14 @@ namespace stock_restauration
             {
                 ajout action_ajout = new ajout(idarticle, this);
                 action_ajout.ShowDialog();
-                
+
+                afficher_liste(idStand);
+
             }
 
             catch { this.Close(); }
+
+            
         }
         #endregion
 
@@ -228,9 +234,13 @@ namespace stock_restauration
             {
                 sortie action_sortie = new sortie(idarticle, this);
                 action_sortie.ShowDialog();
+
+                afficher_liste(idStand);
             }
 
             catch { this.Close(); }
+
+            
         }
         #endregion
 
@@ -244,9 +254,12 @@ namespace stock_restauration
             {
                 supprime action_supp = new supprime(idarticle, this);
                 action_supp.ShowDialog();
+
+                afficher_liste(idStand);
             }
 
             catch { this.Close(); }
+            
 
         }
         #endregion

@@ -6,7 +6,7 @@
           xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
           xmlns:local="clr-namespace:stock_restauration.mdp"
           mc:Ignorable="d"
-          Title="Gestion Stock" Height="300" Width="450" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" BorderBrush="Red" Background="#FF1C1C29">
+          Title="Gestion Stock" Height="189.86" Width="450" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" BorderBrush="Red" Background="#FF1C1C29">
 
     <Controls:MetroWindow.Resources>
         <ResourceDictionary>
@@ -23,14 +23,14 @@
     </Controls:MetroWindow.Resources>
 
     <Grid Background="#FF1C1C29">
-       
-           
- 
-        <Label x:Name="lb_phrase" Content="" HorizontalAlignment="Left" Margin="14,22,-45,0" VerticalAlignment="Top" Width="475" FontSize="25" FontFamily="Forte"  Foreground="Red" Grid.ColumnSpan="2"/>
 
-        <PasswordBox   x:Name="tbox_mdp" HorizontalAlignment="Left" Height="40" Margin="162,132,0,0"  VerticalAlignment="Top" Width="220" Grid.ColumnSpan="2" FontSize="20"  PasswordChar="*"/>
 
-        <Button x:Name="btn_OK" Content="VALIder" HorizontalAlignment="Left" Margin="243,195,0,0" VerticalAlignment="Top" Width="139"  BorderBrush="#FF420808" Foreground="White" FontFamily="Segoe UI Light" FontSize="15" Height="32" Grid.ColumnSpan="2" Click="btn_OK_Click">
+
+        <Label x:Name="lb_phrase" Content="" HorizontalAlignment="Left" Margin="10,22,0,0" VerticalAlignment="Top" Width="424" FontSize="25" FontFamily="Forte"  Foreground="Red"/>
+
+        <PasswordBox   x:Name="tbox_mdp" HorizontalAlignment="Left" Padding="30,2,0,0" Height="40" Margin="15,79,0,0"  VerticalAlignment="Top" Width="283" FontSize="20"  PasswordChar="*"/>
+
+        <Button x:Name="btn_OK" Content="VALIder" HorizontalAlignment="Left" Margin="315,79,0,0" VerticalAlignment="Top" Width="114"  BorderBrush="#FF420808" Foreground="White" FontFamily="Segoe UI Light" FontSize="15" Height="40" Click="btn_OK_Click">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Red" Offset="0"/>
@@ -38,6 +38,7 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
+        <Image x:Name="lock" Source="lock.png" HorizontalAlignment="Left" Stretch="Fill" Height="30" Margin="20,84,0,0" VerticalAlignment="Top" Width="31"/>
 
 
 
