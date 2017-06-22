@@ -4,6 +4,7 @@
              xmlns:local="clr-namespace:stock_restauration"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        
     </Application.Resources>
+    
 </Application>

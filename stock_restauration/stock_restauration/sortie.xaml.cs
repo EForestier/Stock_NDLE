@@ -32,10 +32,10 @@ namespace stock_restauration
         int st_sortie = 0;
 
         private MySql.Data.MySqlClient.MySqlConnection conn;
-        string myConnectionString = "server = 127.0.0.1;"
-                                    + "uid = root;"
-                                    + "pwd = ;"
-                                    + "database = stock_resto;";
+        string info_BDD = "server=" + Properties.Settings.Default.BDD_adresse + ";"
+                             + "uid=" + Properties.Settings.Default.BDD_user + ";"
+                             + "pwd=" + Properties.Settings.Default.BDD_password + ";"
+                             + "database=" + Properties.Settings.Default.BDD_nom + ";";
 
         public sortie(int idarticle, Stand Fen = null)
         {
@@ -53,7 +53,7 @@ namespace stock_restauration
         public void affiche_article()
         {
 
-            conn = new MySql.Data.MySqlClient.MySqlConnection(myConnectionString);
+            conn = new MySql.Data.MySqlClient.MySqlConnection(info_BDD);
             try
             {
                 conn.Open();

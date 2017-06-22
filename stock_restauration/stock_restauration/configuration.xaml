@@ -6,7 +6,7 @@
         xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         xmlns:local="clr-namespace:stock_restauration"
         mc:Ignorable="d"
-        Title="Gestion Stock" Height="300" Width="300" ResizeMode="CanMinimize"  WindowStartupLocation="CenterScreen" Background="#FF1C1C29" >
+        Title="Gestion Stock" Height="450" Width="300" ResizeMode="CanMinimize"  WindowStartupLocation="CenterScreen" Background="#FF1C1C29"  BorderBrush="Red" >
 
     <Controls:MetroWindow.Resources>
         <ResourceDictionary>
@@ -26,7 +26,7 @@
         <Label x:Name="Titre" Content="Confuguration" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="185" FontSize="25" FontFamily="Forte"  Foreground="Red"/>
 
 
-        <Button x:Name="btn_valider" Content="Valider" Margin="67,233,67,0" VerticalAlignment="Top"  BorderBrush="#FF420808" Foreground="White" FontFamily="Segoe UI Light" FontSize="10" Height="17" >
+        <Button x:Name="btn_valider" Content="Valider" Margin="67,371,67,0" VerticalAlignment="Top"  BorderBrush="#FF420808" Foreground="White" FontFamily="Segoe UI Light" FontSize="10" Height="17" Click="BT_VALIDER_Click" >
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Red" Offset="0"/>
@@ -35,7 +35,16 @@
             </Button.Background>
         </Button>
 
-        <Label x:Name="adresse" Content="Adresse IP" HorizontalAlignment="Left" Margin="24,70,0,0" VerticalAlignment="Top" Width="185" FontSize="15" FontFamily="Forte"  Foreground="Red"/>
-        <TextBox x:Name="tBox_ip" HorizontalAlignment="Left" Height="23" Margin="36,105,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="160"/>
+        <Label x:Name="lb_adresse" Content="Adresse IP" HorizontalAlignment="Left" Margin="24,70,0,0" VerticalAlignment="Top" Width="185" FontSize="15" FontFamily="Forte"  Foreground="Red"/>
+        <TextBox x:Name="BDD_adresse" HorizontalAlignment="Left" Height="23" Margin="36,105,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="160"/>
+        
+        <Label x:Name="lb_bdd" Content="Nom de la base de données" HorizontalAlignment="Left" Margin="24,143,0,0" VerticalAlignment="Top" Width="203" FontSize="15" FontFamily="Forte"  Foreground="Red"/>
+        <TextBox x:Name="BDD_nom" HorizontalAlignment="Left" Height="23" Margin="36,178,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="160"/>
+       
+        <Label x:Name="lb_user" Content="Nom d'utilisateur" HorizontalAlignment="Left" Margin="24,218,0,0" VerticalAlignment="Top" Width="185" FontSize="15" FontFamily="Forte"  Foreground="Red"/>
+        <TextBox x:Name="BDD_user" HorizontalAlignment="Left" Height="23" Margin="36,253,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="160"/>
+        
+        <Label x:Name="lb_mdp" Content="Mot de passe" HorizontalAlignment="Left" Margin="24,284,0,0" VerticalAlignment="Top" Width="185" FontSize="15" FontFamily="Forte"  Foreground="Red"/>
+        <TextBox x:Name="BDD_password" HorizontalAlignment="Left" Height="23" Margin="36,319,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="160"/>
     </Grid>
 </Controls:MetroWindow>

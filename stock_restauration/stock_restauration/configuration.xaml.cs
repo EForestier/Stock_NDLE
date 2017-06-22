@@ -23,10 +23,24 @@ namespace stock_restauration
         public configuration()
         {
             InitializeComponent();
+
+            BDD_adresse.Text = Properties.Settings.Default.BDD_adresse;
+            BDD_nom.Text = Properties.Settings.Default.BDD_nom;
+            BDD_user.Text = Properties.Settings.Default.BDD_user;
+            BDD_password.Text = Properties.Settings.Default.BDD_password;
         }
 
+        private void BT_VALIDER_Click(object sender, RoutedEventArgs e)
+        {
+            Properties.Settings.Default["BDD_adresse"] = BDD_adresse.Text;
+            Properties.Settings.Default["BDD_nom"] = BDD_nom.Text;
+            Properties.Settings.Default["BDD_user"] = BDD_user.Text;
+            Properties.Settings.Default["BDD_password"] = BDD_password.Text;
 
-        
+            Properties.Settings.Default.Save();
+            this.Close();
+        }
+
 
 
 
