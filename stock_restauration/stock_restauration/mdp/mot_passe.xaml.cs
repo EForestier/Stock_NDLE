@@ -96,6 +96,7 @@ namespace stock_restauration.mdp
                             {
                                 menu_organisateur wind_organisateur = new menu_organisateur();
                                 _mdp = "";
+                                rdrMdp.Close();
                                 wind_organisateur.ShowDialog();
                             }
                             else { throw new Exception(); }
@@ -105,6 +106,7 @@ namespace stock_restauration.mdp
                             {
                                 ListeStand menu_stand = new ListeStand(false);
                                 _mdp = "";
+                                rdrMdp.Close();
                                 menu_stand.ShowDialog();
                             }
                             else { throw new Exception(); }
@@ -126,8 +128,9 @@ namespace stock_restauration.mdp
                 catch {
                     MessageBox.Show("mot de passe incorrect");
                     tbox_mdp.Password = "";
-                } 
+                }
             }
+            conn.Close();
         }
        
 

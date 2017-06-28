@@ -48,6 +48,14 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
+        <Button x:Name="BTN_export" Content="exporter en PDF" HorizontalAlignment="Left" Margin="400,398,0,0" VerticalAlignment="Top" Width="174" Height="28" BorderBrush="#FF420808" Foreground="White" FontFamily="Segoe UI Light" FontSize="13" Click="BTN_export_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Red" Offset="0"/>
+                    <GradientStop Color="#FFC70000" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
 
         <Image x:Name="footer" HorizontalAlignment="Left" Height="248" Margin="-28,473,-546,0" VerticalAlignment="Top" Width="1568" Source="footer.png"/>
 

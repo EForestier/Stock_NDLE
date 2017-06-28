@@ -152,19 +152,7 @@
                 </Button>
             </StackPanel>
         </GroupBox>
-<<<<<<< HEAD
-        <Button x:Name="BTN_reset" Content="Renitialiser" HorizontalAlignment="Left" Margin="784,31,0,0" VerticalAlignment="Top" Width="174" Height="28" BorderBrush="#FF420808" Foreground="White" FontFamily="Segoe UI Light" FontSize="13" >
-            <Button.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="Red" Offset="0"/>
-                    <GradientStop Color="#FFC70000" Offset="1"/>
-                </LinearGradientBrush>
-            </Button.Background>
-        </Button>
-        <Button x:Name="BTN_export" Content="exporter en PDF" HorizontalAlignment="Left" Margin="586,31,0,0" VerticalAlignment="Top" Width="174" Height="28" BorderBrush="#FF420808" Foreground="White" FontFamily="Segoe UI Light" FontSize="13" Click="BTN_export_Click">
-=======
         <Button x:Name="btn_RAZ" Content="Renitialiser" HorizontalAlignment="Left" Margin="784,31,0,0" VerticalAlignment="Top" Width="174" Height="28" BorderBrush="#FF420808" Foreground="White" FontFamily="Segoe UI Light" FontSize="13" Click="RAZ_Click" >
->>>>>>> 8c29fd3320d6fa00f03b8bc060c2efdb075ddba3
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Red" Offset="0"/>

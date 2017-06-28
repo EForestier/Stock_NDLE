@@ -18,7 +18,6 @@ using MahApps.Metro.Controls;
 using System.Windows.Threading;
 using System.Threading;
 
-
 namespace stock_restauration
 {
     /// <summary>
@@ -56,8 +55,7 @@ namespace stock_restauration
 
             if (!estOrganisateur)
             {
-                BTN_reset.IsEnabled = false;
-                BTN_export.IsEnabled = false;
+                btn_RAZ.IsEnabled = false;
             }
 
         }
@@ -76,7 +74,9 @@ namespace stock_restauration
             MySqlDataReader rdrStand = cmd.ExecuteReader();
 
             btn_Bar_erdre.Tag += " WHERE id = 1";
-           
+            rdrStand.Close();
+            conn.Close();
+
         }
         #endregion
 
@@ -232,6 +232,7 @@ namespace stock_restauration
         }
         #endregion
 
+
         #region Heure
         public void horloge(object sender, EventArgs e)
         {
@@ -249,14 +250,7 @@ namespace stock_restauration
 
         #endregion
 
-        private void BTN_reset_Click(object sender, RoutedEventArgs e)
-        {
 
-        }
 
-        private void BTN_export_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
     }
 }

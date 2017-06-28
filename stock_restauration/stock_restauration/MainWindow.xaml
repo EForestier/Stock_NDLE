@@ -48,6 +48,7 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
+        
 
         <Image x:Name="footer" HorizontalAlignment="Left" Height="248" Margin="-28,473,-546,0" VerticalAlignment="Top" Width="1568" Source="footer.png"/>
         <Image x:Name="logo" HorizontalAlignment="Left" Height="166" Margin="-323,93,-310,0" VerticalAlignment="Top" Width="1627" Source="logoville.png"/>

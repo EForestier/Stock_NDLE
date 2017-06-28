@@ -107,3 +107,4 @@ C:\Users\Edouard FORESTIER\Documents\GitHub\Stock_NDLE\stock_restauration\stock_
 C:\Users\Edouard FORESTIER\Documents\GitHub\Stock_NDLE\stock_restauration\stock_restauration\obj\Debug\stock_restauration.exe
 C:\Users\Edouard FORESTIER\Documents\GitHub\Stock_NDLE\stock_restauration\stock_restauration\obj\Debug\stock_restauration.pdb
 C:\Users\Edouard FORESTIER\Documents\GitHub\Stock_NDLE\stock_restauration\stock_restauration\obj\Debug\stock_restauration.csprojResolveAssemblyReference.cache
+C:\Users\nicol\Documents\GitHub\Stock_NDLE\stock_restauration\stock_restauration\bin\Debug\itextsharp.dll
