@@ -28,13 +28,12 @@ namespace stock_restauration
     {
         private string stand_id;
         private bool estOrganisateur;
-        private MySql.Data.MySqlClient.MySqlConnection conn;
 
-
-        string myConnectionString = "server = 127.0.0.1;"
-                                    + "uid = root;"
-                                    + "pwd = ;"
-                                    + "database = stock_resto;";
+        protected MySql.Data.MySqlClient.MySqlConnection conn;
+        string info_BDD = "server=" + Properties.Settings.Default.BDD_adresse + ";"
+                              + "uid=" + Properties.Settings.Default.BDD_user + ";"
+                              + "pwd=" + Properties.Settings.Default.BDD_password + ";"
+                              + "database=" + Properties.Settings.Default.BDD_nom + ";";
 
         bool etat = false;
         DispatcherTimer Retour = new DispatcherTimer();
@@ -208,6 +207,30 @@ namespace stock_restauration
         #endregion
 
         // ****** OPTION ******
+
+        #region Bouton Rmise a zero sortie
+        private void RAZ_Click(object sender, RoutedEventArgs e)
+        {
+
+            if (!this.estOrganisateur)
+            {
+                btn_RAZ.IsEnabled = false;
+            }
+            else
+            {
+                conn = new MySql.Data.MySqlClient.MySqlConnection(info_BDD);
+                conn.Open();
+
+                MySqlCommand cmd = new MySqlCommand("UPDATE article SET  sortie= 0 ");
+                cmd.Connection = conn;
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Sortie mis a zéro.");
+                conn.Close();
+
+               
+            }
+        }
+        #endregion
 
         #region Heure
         public void horloge(object sender, EventArgs e)

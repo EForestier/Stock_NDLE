@@ -25,13 +25,13 @@ namespace stock_restauration.mdp
     {
         string _mdp;
         int numeroFenetre;
-        //int btn_bene;
-        private MySql.Data.MySqlClient.MySqlConnection conn;
+        
 
-        string myConnectionString = "server = 127.0.0.1;"
-                                    + "uid = root;"
-                                    + "pwd = ;"
-                                    + "database = stock_resto;";
+        private MySql.Data.MySqlClient.MySqlConnection conn;
+        string info_BDD = "server=" + Properties.Settings.Default.BDD_adresse + ";"
+                              + "uid=" + Properties.Settings.Default.BDD_user + ";"
+                              + "pwd=" + Properties.Settings.Default.BDD_password + ";"
+                              + "database=" + Properties.Settings.Default.BDD_nom + ";";
 
 
 
@@ -58,7 +58,9 @@ namespace stock_restauration.mdp
             }
             else
             {
-                conn = new MySql.Data.MySqlClient.MySqlConnection(myConnectionString);
+
+
+                conn = new MySql.Data.MySqlClient.MySqlConnection(info_BDD);
 
                 conn.Open();
 
@@ -73,6 +75,7 @@ namespace stock_restauration.mdp
 
                 do
                 {
+                    
                     rdrMdp.Read();
                     _mdp = rdrMdp[1].ToString();
 
@@ -106,14 +109,17 @@ namespace stock_restauration.mdp
                             }
                             else { throw new Exception(); }
                             break;
-                        case 3:
-                            if (tbox_mdp.Password == "organisateur")
-                            {
-                                configuration wind_configuration = new configuration();
-                                _mdp = "";
-                                wind_configuration.ShowDialog();
-                            }
-                            else { throw new Exception(); }
+                        //case 3:
+                        //    if (tbox_mdp.Password == "organisateur")
+                        //    {
+                        //        configuration wind_configuration = new configuration();
+                        //        _mdp = "";
+                        //        wind_configuration.ShowDialog();
+                        //    }
+                        //    else { throw new Exception(); }
+                        //    break;
+                        default:
+                            MessageBox.Show("mot de passe incorrect");
                             break;
                     }
                 }

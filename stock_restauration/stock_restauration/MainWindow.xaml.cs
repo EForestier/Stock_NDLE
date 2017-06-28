@@ -33,10 +33,7 @@ namespace stock_restauration
             timer.Interval = TimeSpan.FromSeconds(1);
             timer.Tick += new EventHandler(horloge);
             timer.Start();
-
-           
-
-
+            
         }
 
         private void btn_benevole_Click(object sender, RoutedEventArgs e)
@@ -60,10 +57,13 @@ namespace stock_restauration
 
         private void btn_conf_Click(object sender, RoutedEventArgs e)
         {
-           
-            mdp.mot_passe wind_mdp = new mdp.mot_passe(3);
-            wind_mdp.ShowDialog();
-           
+
+            configuration wind_configuration = new configuration();
+            //        _mdp = "";
+            wind_configuration.ShowDialog();
+            //mdp.mot_passe wind_mdp = new mdp.mot_passe(3);
+            //wind_mdp.ShowDialog();
+
         }
 
         public void horloge (object sender, EventArgs e)

@@ -28,12 +28,12 @@ namespace stock_restauration
         public delegate void D_liste();
         private bool _estOrganisateur;
         private bool _etat;
+
         private MySql.Data.MySqlClient.MySqlConnection conn;
-       
-        string myConnectionString = "server = 127.0.0.1;"
-                                    + "uid = root;"
-                                    + "pwd = ;"
-                                    + "database = stock_resto;";
+        string info_BDD = "server=" + Properties.Settings.Default.BDD_adresse + ";"
+                             + "uid=" + Properties.Settings.Default.BDD_user + ";"
+                             + "pwd=" + Properties.Settings.Default.BDD_password + ";"
+                             + "database=" + Properties.Settings.Default.BDD_nom + ";";
         string idStand;
 
         
@@ -87,7 +87,7 @@ namespace stock_restauration
         private void afficher_liste(string IdStand/*, object sender, EventArgs e*/)
         {
 
-            conn = new MySql.Data.MySqlClient.MySqlConnection(myConnectionString);
+            conn = new MySql.Data.MySqlClient.MySqlConnection(info_BDD);
 
             try
             {

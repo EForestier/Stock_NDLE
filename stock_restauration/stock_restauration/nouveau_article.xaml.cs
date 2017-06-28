@@ -25,15 +25,14 @@ namespace stock_restauration
     /// </summary>
     public partial class nouveau_article : MetroWindow
     {
-       
 
-        private MySql.Data.MySqlClient.MySqlConnection conn;
         int sortie = 0;
 
-        string myConnectionString = "server = 127.0.0.1;"
-                                    + "uid = root;"
-                                    + "pwd = ;"
-                                    + "database = stock_resto;";
+        private MySql.Data.MySqlClient.MySqlConnection conn;
+        string info_BDD = "server=" + Properties.Settings.Default.BDD_adresse + ";"
+                              + "uid=" + Properties.Settings.Default.BDD_user + ";"
+                              + "pwd=" + Properties.Settings.Default.BDD_password + ";"
+                              + "database=" + Properties.Settings.Default.BDD_nom + ";";
 
 
         public nouveau_article()
@@ -52,7 +51,7 @@ namespace stock_restauration
 
         private void btn_nouveau_Click(object sender, RoutedEventArgs e)
         {
-            conn = new MySql.Data.MySqlClient.MySqlConnection(myConnectionString);
+            conn = new MySql.Data.MySqlClient.MySqlConnection(info_BDD);
 
             conn.Open();
             
