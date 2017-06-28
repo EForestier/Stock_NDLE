@@ -55,6 +55,12 @@ namespace stock_restauration
             Retour.Tick += new EventHandler(Ferme);
             Retour.Start();
 
+            if (!estOrganisateur)
+            {
+                BTN_reset.IsEnabled = false;
+                BTN_export.IsEnabled = false;
+            }
+
         }
 
    
@@ -216,9 +222,18 @@ namespace stock_restauration
             if(etat == false)
             { this.Close(); }                
         }
+
+
         #endregion
 
+        private void BTN_reset_Click(object sender, RoutedEventArgs e)
+        {
 
+        }
 
+        private void BTN_export_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
